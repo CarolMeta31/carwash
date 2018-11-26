@@ -1,0 +1,50 @@
+<ion-header>
+
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+      <ion-title>EditProfile</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+      <div class="container" align="center">
+  
+          <div class="profile-image">
+            <img src="{{imgPreview}}" (click)="getPhoto()">  
+        
+            </div>
+    
+            <button ion-button  round (click)="takePhoto()">Upload</button>
+          
+  
+                <ion-list no-lines>
+                  <ion-item >
+                      <ion-label stacked >name</ion-label>
+                      <ion-input  type="text"></ion-input>
+                  </ion-item>
+                  
+                  <ion-item >
+                      <ion-label stacked  >surname</ion-label>
+                      <ion-input  type="text"></ion-input>
+                  </ion-item>
+              
+               
+                  <ion-item >
+                      <ion-label stacked  >Email</ion-label>
+                      <ion-input  type="text"></ion-input>
+                  </ion-item>
+              
+                 
+                </ion-list>
+    
+              <button ion-button  round color="Recipered"   >save Profile</button>
+                  
+     </div>
+    
+    
+  </ion-content>
+  
