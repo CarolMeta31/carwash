@@ -13,6 +13,61 @@
 </ion-header>
 
 
-<ion-content padding>
+ion-content padding class="content"> 
+  
+<ion-label>1.What kind of entertainment are you situted next to?</ion-label>
+  <ion-list radio-group [(ngModel)]="entertainment">
 
+    <ion-item  class="items" no-lines>
+      <ion-label>Pub/Lounge</ion-label>
+      <ion-checkbox color="primary"></ion-checkbox>
+    </ion-item>
+
+    <ion-item  class="items" no-lines>
+      <ion-label>Park</ion-label>
+      <ion-checkbox color="primary" checked="false"></ion-checkbox>
+    </ion-item>
+
+    <ion-item class="items" no-lines>   
+      <ion-label>Restaurant</ion-label>
+      <ion-checkbox color="primary"></ion-checkbox>
+    </ion-item>
+
+    <ion-item class="items" no-lines> 
+      <ion-label>Other</ion-label>
+      <ion-checkbox color="primary" checked="false"></ion-checkbox>
+    </ion-item>
+
+ <ion-label text-wrap>2.What are the operational hours of the entertainment place?</ion-label>
+   <ion-row>
+     <ion-col col-6>
+        <ion-label>Opening Hours</ion-label>
+        <ion-item class="items"  no-lines>
+        <ion-select name="d" class="myselect" [(ngModel)]="openinghours"  >
+          <ion-option value="8:00am">8:00am</ion-option>
+          <ion-option value="9:00am">9:00am</ion-option>
+          <ion-option value="10:00am">10:00am</ion-option>
+          <ion-option value="11:00am">11:00am</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-col>
+   
+<ion-col col-6>
+    <ion-label>Closing Hours</ion-label>
+    <ion-item class="items"  no-lines>
+    <ion-select  [(ngModel)]="closinghours" >
+      <ion-option  value="18:00pm">18:00pm</ion-option>
+      <ion-option  value="19:00pm">19:00pm</ion-option>
+      <ion-option  value="20:00am">20:00pm</ion-option>
+      <ion-option  value="21:00am">21:00pm</ion-option>
+    </ion-select>
+  </ion-item>
+</ion-col>
+</ion-row>
+
+<ion-label text-wrap>3.</ion-label>
+
+
+</ion-list>
 </ion-content>
+
