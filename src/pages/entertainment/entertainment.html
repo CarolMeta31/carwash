@@ -70,8 +70,8 @@
 <ion-col col-6>
   <ion-label>Saturday Hours</ion-label>
   <ion-item class="items"  no-lines>
-  <ion-select  [(ngModel)]="saturday" >
-    <ion-option  value="08:00am">08:00am-19:00pm</ion-option>
+  <ion-select  name="d" class="myselect" [(ngModel)]="saturday" text-wrap>
+    <ion-option  value="08:00am" text-wrap >08:00am-19:00pm</ion-option>
     <ion-option  value="09:30am">09:30am-21:30pm</ion-option>
     <ion-option  value="10:15am">10:15am-23:15pm</ion-option>
   </ion-select>
@@ -81,7 +81,7 @@
 <ion-col col-6>
   <ion-label>Sunday Hours</ion-label>
   <ion-item class="items"  no-lines>
-  <ion-select  [(ngModel)]="sunday" >
+  <ion-select  name="d" class="myselect" [(ngModel)]="sunday" >
     <ion-option  value="09:00am">09:00am-17:00pm</ion-option>
     <ion-option  value="10:30am">10:30am-18:30pm</ion-option>
     <ion-option  value="11:15am">11:15am-20:15pm</ion-option>
