@@ -54,29 +54,58 @@
        </ion-col>
         
        </ion-row>
+       <ion-label text-wrap>4.What are your operational hours on weekends?</ion-label>
+       <ion-row>
+       <ion-col col-6>
+          <ion-label text-wrap>Saturday Hours</ion-label>
+          <ion-item class="items" no-lines>
+          <ion-select name="d" class="myselect" [(ngModel)]="saturdayhours"> 
+          
        
-      <ion-label text-wrap>4.Is the car wash situated near an entertainment place?</ion-label>
-      <ion-list radio-group [(ngModel)]="entertainment">
-          <ion-item no-lines>
-                <ion-label>Yes</ion-label>
-                <ion-radio value="yes"checked>
-                </ion-radio>
-                </ion-item>
-            <ion-item no-lines>
-                <ion-label>No</ion-label>
-                <ion-radio value="no"checked></ion-radio>
-                </ion-item> 
-
-                </ion-list>
-
-      <ion-card align="center" class="cards" (click)="sortedByCards(0)">
-          <img src="./assets/imgs/cashwash.png"/>
-          <ion-card-header>CarWash Details</ion-card-header>
-        </ion-card>
+            <ion-option  value="07:00am-19:00pm">07:00am-19:00pm</ion-option>
+            <ion-option  value="08:00am-20:00pm">08:00am-20:00pm</ion-option>
+            <ion-option  value="09:00am-21:00am">09:00am-21:00am</ion-option>
+          
+          </ion-select>
+          
+        </ion-item>
+      </ion-col>
     
-        <ion-card align="center" class="cards" (click)="sortedByCard(1)">
-            <img src="./assets/imgs/entertainment.png"/>
+      <ion-col col-6>
+         <ion-label text-wrap>Sunday Hours</ion-label>
+         <ion-item class="items" no-lines>
+         <ion-select [(ngModel)]="sundayhours">
+      
+           <ion-option  value="08:00am-18:00pm">08:00am-18:00pm</ion-option>
+           <ion-option  value="09:00am-19:00pm">09:00am-19:00pm</ion-option>
+           <ion-option  value="10:00am-20:00am">10:00am-20:00am</ion-option>
+         
+         </ion-select>
+       </ion-item>
+     </ion-col>
+    </ion-row>
+      <ion-label text-wrap>5.Is the car wash situated near an entertainment place?</ion-label>
+       <ion-item>
+          <ion-label text-wrap>Select:</ion-label>
+          <ion-select [(ngModel)]="entertainment">
+            <ion-option value="yes">Yes</ion-option>
+            <ion-option value="no">No</ion-option>
+          </ion-select>
+      </ion-item>
+          <ion-card align="center" class="cards" (click)="sortedByCards(0)">
+              
+              <ion-card-header>CarWash Details</ion-card-header>
+              <ion-card-content>
+              <img src="./assets/imgs/cashwash.png"/>
+                </ion-card-content>
+            </ion-card>
+         <ion-card *ngIf="entertainment=='yes'"align="center" class="cards" (click)="sortedByCard(1)">
             <ion-card-header>Entertainment</ion-card-header>
+            <ion-card-content>
+              <ion-item class="img">
+                <img src="./assets/imgs/entertainment.png"/>
+              </ion-item>
+            </ion-card-content>
           </ion-card>
-        
-        </ion-content>
+          </ion-content>
+       
