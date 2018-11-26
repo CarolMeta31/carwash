@@ -1,3 +1,5 @@
+import { EditProfilePage } from './../pages/edit-profile/edit-profile';
+import { LoginPage } from './../pages/login/login';
 import { EntertainmentPage } from './../pages/entertainment/entertainment';
 import { CarDetailsPage } from './../pages/car-details/car-details';
 import { BrowserModule } from '@angular/platform-browser';
@@ -8,12 +10,16 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { AuthProvider } from '../providers/auth/auth';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    CarDetailsPage,EntertainmentPage
+    CarDetailsPage,
+    EntertainmentPage,
+    LoginPage,
+    EditProfilePage
   ],
   imports: [
     BrowserModule,
@@ -23,12 +29,16 @@ import { HomePage } from '../pages/home/home';
   entryComponents: [
     MyApp,
     HomePage,
-    CarDetailsPage,EntertainmentPage
+    CarDetailsPage,
+    EntertainmentPage,
+    LoginPage,
+    EditProfilePage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AuthProvider
   ]
 })
 export class AppModule {}
