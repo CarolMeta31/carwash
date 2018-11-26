@@ -1,9 +1,3 @@
-<!--
-  Generated template for the CarDetailsPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
@@ -14,5 +8,75 @@
 
 
 <ion-content padding>
+
+  <h1>What type of cars do you wash?</h1>
+  <button ion-button block light (click)="suv()">SUV</button>
+  <button ion-button block light (click)="sedan()">Sedan</button>
+  <button ion-button block light (click)="mini()">Mini-bus</button>
+  <button ion-button block light (click)="van()">Van</button>
+  <button ion-button block light (click)="truck()">TRUCK/BUS</button>
+
+  <h1>How many cars do you wash a day?</h1>
+
+  <ion-item>
+    <ion-label>Sedan</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+      <ion-label>Suv</ion-label>
+      <ion-input type="number"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+      <ion-label>Van</ion-label>
+      <ion-input type="number"></ion-input>
+  </ion-item>
+
+  <ion-item>
+      <ion-label>Mini-bus</ion-label>
+      <ion-input type="number"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+      <ion-label>Truck/van</ion-label>
+      <ion-input type="number"></ion-input>
+  </ion-item>
+
+
+  <h1>Number of employees you have</h1>
+
+  
+  <ion-item>
+      <ion-label>Males</ion-label>
+      <ion-input type="number"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+        <ion-label>Female</ion-label>
+        <ion-input type="number"></ion-input>
+    </ion-item>
+    
+
+  <h1>How much profit do you make a day?</h1>
+
+  <ion-list radio-group>
+      
+    
+      <ion-item>
+        <ion-label>R500-R1000</ion-label>
+        <ion-radio value="go"></ion-radio>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label>R1000-R2500</ion-label>
+        <ion-radio value="rust"></ion-radio>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label>R2500+</ion-label>
+        <ion-radio value="python"></ion-radio>
+      </ion-item>
+    </ion-list>
 
 </ion-content>
