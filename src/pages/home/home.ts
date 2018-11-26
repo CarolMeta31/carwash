@@ -14,14 +14,14 @@ export class HomePage {
 constructor(public navCtrl: NavController) {}
 sortedByCards(i:number){
   this.category=[];
-  this.category = ['CarWashDetails','Entertainment'];
+  this.category = ['CarWashDetails'];
   this.Cards=this.category[i];
 
   this.navCtrl.push(CarDetailsPage);
 }
 sortedByCard(i:number){
   this.category=[];
-  this.category = ['Entertainment',];
+  this.category = ['Entertainment'];
   this.Cards=this.category[i];
 
   this.navCtrl.push(EntertainmentPage);
