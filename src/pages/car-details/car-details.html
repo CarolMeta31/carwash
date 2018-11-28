@@ -7,76 +7,112 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content class="login-content">
 
-  <h1>What type of cars do you wash?</h1>
-  <button ion-button block light (click)="suv()">SUV</button>
-  <button ion-button block light (click)="sedan()">Sedan</button>
-  <button ion-button block light (click)="mini()">Mini-bus</button>
-  <button ion-button block light (click)="van()">Van</button>
-  <button ion-button block light (click)="truck()">TRUCK/BUS</button>
+  <div class="container" align="center">
+<!-- 
+      <ion-card>
+          <ion-card-header>
+              <ion-item no-lines>
+                  <ion-label text-wrap>What type of cars do you wash?</ion-label>
+              </ion-item>
+          </ion-card-header>
+          <ion-card-content>
+              <ion-item no-lines>
+                  <button ion-button  full color="danger" (click)="suv()">SUV</button>
+                  <button ion-button  full color="danger" (click)="sedan()">Sedan</button>
+                  <button ion-button  full color="danger" (click)="mini()">Mini-bus</button>
+                  <button ion-button  full color="danger" (click)="van()">Van</button>
+                  <button ion-button  full color="danger" (click)="truck()">TRUCK/BUS</button>
+                </ion-item>
+          </ion-card-content>
+        </ion-card> -->
 
-  <h1>How many cars do you wash a day?</h1>
+        <ion-card>
+            <ion-card-header>
+                <ion-item no-lines>
+                    <ion-label text-wrap >How many cars do you wash a day?</ion-label>
+                  </ion-item>
+            </ion-card-header>
+            <ion-card-content>
+                <ion-list no-lines>
+                    <ion-item>
+                      <ion-label>Sedan</ion-label>
+                      <ion-input type="number"></ion-input>
+                    </ion-item>
+                    
+                    <ion-item>
+                        <ion-label>Suv</ion-label>
+                        <ion-input type="number"></ion-input>
+                    </ion-item>
+                    
+                    <ion-item>
+                        <ion-label>Van</ion-label>
+                        <ion-input type="number"></ion-input>
+                    </ion-item>
+                  
+                    <ion-item>
+                        <ion-label>Mini-bus</ion-label>
+                        <ion-input type="number"></ion-input>
+                    </ion-item>
+                    
+                    <ion-item>
+                        <ion-label>Truck/van</ion-label>
+                        <ion-input type="number"></ion-input>
+                    </ion-item>
+                  </ion-list>
+            </ion-card-content>
+          </ion-card>
 
-  <ion-item>
-    <ion-label>Sedan</ion-label>
-    <ion-input type="number"></ion-input>
-  </ion-item>
-  
-  <ion-item>
-      <ion-label>Suv</ion-label>
-      <ion-input type="number"></ion-input>
-  </ion-item>
-  
-  <ion-item>
-      <ion-label>Van</ion-label>
-      <ion-input type="number"></ion-input>
-  </ion-item>
+          <ion-card>
+              <ion-card-header>
+                  <ion-item no-lines>
+                      <ion-label text-wrap>Number of employees you have</ion-label>
+                  </ion-item>
+              </ion-card-header>
+              <ion-card-content>
+                  <ion-list>
+                      <ion-item>
+                          <ion-label>Males</ion-label>
+                          <ion-input type="number"></ion-input>
+                        </ion-item>
+                        
+                        <ion-item>
+                            <ion-label>Female</ion-label>
+                            <ion-input type="number"></ion-input>
+                        </ion-item>
+                    </ion-list>
+              </ion-card-content>
+            </ion-card>
 
-  <ion-item>
-      <ion-label>Mini-bus</ion-label>
-      <ion-input type="number"></ion-input>
-  </ion-item>
-  
-  <ion-item>
-      <ion-label>Truck/van</ion-label>
-      <ion-input type="number"></ion-input>
-  </ion-item>
+            <ion-card>
+                <ion-card-header>
+                    <ion-item no-lines>
+                        <ion-label text-wrap>How much profit do you make a day?</ion-label>
+                      </ion-item>
+                </ion-card-header>
+                <ion-card-content>
+                    <ion-list radio-group>
+                        <ion-item>
+                          <ion-label>R500-R1000</ion-label>
+                          <ion-radio value="go"></ion-radio>
+                        </ion-item>
+                      
+                        <ion-item>
+                          <ion-label>R1000-R2500</ion-label>
+                          <ion-radio value="rust"></ion-radio>
+                        </ion-item>
+                      
+                        <ion-item>
+                          <ion-label>R2500+</ion-label>
+                          <ion-radio value="python"></ion-radio>
+                        </ion-item>
+                  </ion-list>
+                </ion-card-content>
+              </ion-card>
 
+  </div>
 
-  <h1>Number of employees you have</h1>
-
-  
-  <ion-item>
-      <ion-label>Males</ion-label>
-      <ion-input type="number"></ion-input>
-    </ion-item>
-    
-    <ion-item>
-        <ion-label>Female</ion-label>
-        <ion-input type="number"></ion-input>
-    </ion-item>
-    
-
-  <h1>How much profit do you make a day?</h1>
-
-  <ion-list radio-group>
-      
-    
-      <ion-item>
-        <ion-label>R500-R1000</ion-label>
-        <ion-radio value="go"></ion-radio>
-      </ion-item>
-    
-      <ion-item>
-        <ion-label>R1000-R2500</ion-label>
-        <ion-radio value="rust"></ion-radio>
-      </ion-item>
-    
-      <ion-item>
-        <ion-label>R2500+</ion-label>
-        <ion-radio value="python"></ion-radio>
-      </ion-item>
-    </ion-list>
+ 
 
 </ion-content>

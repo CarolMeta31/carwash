@@ -1,3 +1,4 @@
+import { CarPage } from './../car/car';
 import { EntertainmentPage } from './../entertainment/entertainment';
 import { CarDetailsPage } from './../car-details/car-details';
 import { Component } from '@angular/core';
@@ -25,5 +26,8 @@ sortedByCard(i:number){
   this.Cards=this.category[i];
 
   this.navCtrl.push(EntertainmentPage);
+}
+next(){
+  this.navCtrl.push(CarPage);
 }
 }

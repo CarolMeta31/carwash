@@ -1,3 +1,4 @@
+import { CarPage } from './../pages/car/car';
 import { EditProfilePage } from './../pages/edit-profile/edit-profile';
 import { LoginPage } from './../pages/login/login';
 import { EntertainmentPage } from './../pages/entertainment/entertainment';
@@ -19,7 +20,8 @@ import { AuthProvider } from '../providers/auth/auth';
     CarDetailsPage,
     EntertainmentPage,
     LoginPage,
-    EditProfilePage
+    EditProfilePage,
+    CarPage
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,8 @@ import { AuthProvider } from '../providers/auth/auth';
     CarDetailsPage,
     EntertainmentPage,
     LoginPage,
-    EditProfilePage
+    EditProfilePage,
+    CarPage
   ],
   providers: [
     StatusBar,
