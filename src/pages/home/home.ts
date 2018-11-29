@@ -53,7 +53,7 @@ sortedByCard(i:number){
       closinghours:this.closinghours,
       satrdayHrs:this.satrdayHrs,
        sundayHrs:this.sundayHrs,
-    entertainmentAvailable:this.entertainmentAvailable
+       entertainmentAvailable:this.entertainmentAvailable
          
         })
 

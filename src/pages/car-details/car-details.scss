@@ -1,3 +1,69 @@
 page-car-details {
 
+    
+    .login-content {
+        
+       // background-image: url('../../assets/imgs/something.jpg');
+        background-repeat :no-repeat;
+        background-size:cover;
+       }
+
+       .container{
+        background-color:transparent;
+        border-radius: 10px;
+        margin-top: 20%;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding:20px;
+      box-shadow: none;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      flex-direction: column;
+      right: 0;
+      position: absolute;
+     
+     }
+
+     .item{
+        
+        background-color:transparent;
+}
+
+#par{
+    color:white;
+}
+#parr{
+    color:gray;
+}
+
+.car{
+    background-color: rgba(0.0,0.0,0.0,0.3);
+    padding:20px;
+    border-radius: 10px;
+    .card-header{
+        font-size: medium;
+        color: white
+    }
+    .icon{
+        color: white;
+        size: 50px;
+    }
+   
+}
+.ent{
+    background-color: rgba(0.0,0.0,0.0,0.3);
+    padding:20px;
+    border-radius: 10px;
+    .card-header{
+        font-size: large;
+        color: white
+    }
+    .icon{
+        color: white;
+        size: 50px;
+    }
+    
+}
+
 }

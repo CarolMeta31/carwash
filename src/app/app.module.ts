@@ -1,3 +1,4 @@
+import { CarPage } from './../pages/car/car';
 import { EditProfilePage } from './../pages/edit-profile/edit-profile';
 import { LoginPage } from './../pages/login/login';
 import { EntertainmentPage } from './../pages/entertainment/entertainment';
@@ -30,7 +31,8 @@ firebase.initializeApp(config);
     CarDetailsPage,
     EntertainmentPage,
     LoginPage,
-    EditProfilePage
+    EditProfilePage,
+    CarPage
   ],
   imports: [
     BrowserModule,
@@ -43,7 +45,8 @@ firebase.initializeApp(config);
     CarDetailsPage,
     EntertainmentPage,
     LoginPage,
-    EditProfilePage
+    EditProfilePage,
+    CarPage
   ],
   providers: [
     StatusBar,

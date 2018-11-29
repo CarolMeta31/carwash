@@ -9,36 +9,36 @@ export class EntertainmentProvider {
 
 
 
-  openHours:Time;
-  closinghours:Time;
-  satrdayHrs:Time;
-  sundayHrs:Time;
-  entertainmentPub:string;
-  entertainmentPark:string; 
-  entertainmentRes:string;
-  entertainmentOther:string;
+  // openHours:Time;
+  // closinghours:Time;
+  // satrdayHrs:Time;
+  // sundayHrs:Time;
+  // entertainmentPub:string;
+  // entertainmentPark:string; 
+  // entertainmentRes:string;
+  // entertainmentOther:string;
 
   constructor() {
     console.log('Hello EntertainmentProvider Provider');
   }
-  entertainmentInfo(openHours,closinghours,satrdayHrs,sundayHrs,
-    entertainmentPub,
-    entertainmentPark,
-    entertainmentRes,
-    entertainmentOther){
+  // entertainmentInfo(openHours,closinghours,satrdayHrs,sundayHrs,
+  //   entertainmentPub,
+  //   entertainmentPark,
+  //   entertainmentRes,
+  //   entertainmentOther){
 
-    firebase.database().ref(`/CarDetails`).push().set({
+  //   firebase.database().ref(`/CarDetails`).push().set({
   
 
-       openHours:this.openHours,
-       closinghours:this.closinghours,
-       satrdayHrs:this.satrdayHrs,
-       sundayHrs:this.sundayHrs,
-       entertainmentPub:this.entertainmentPub,
-       entertainmentPark:this.entertainmentPark, 
-       entertainmentRes:this.entertainmentRes,
-       entertainmentOther:this.entertainmentOther
+  //      openHours:this.openHours,
+  //      closinghours:this.closinghours,
+  //      satrdayHrs:this.satrdayHrs,
+  //      sundayHrs:this.sundayHrs,
+  //      entertainmentPub:this.entertainmentPub,
+  //      entertainmentPark:this.entertainmentPark, 
+  //      entertainmentRes:this.entertainmentRes,
+  //      entertainmentOther:this.entertainmentOther
   
-    })
-   }
+  //   })
+  //  }
 }
