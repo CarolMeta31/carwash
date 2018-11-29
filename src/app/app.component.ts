@@ -5,19 +5,11 @@ import { Component ,ViewChild} from '@angular/core';
 import { Platform,Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import * as firebase from 'firebase';
+
 import { AuthProvider } from './../providers/auth/auth';
 
 
 
-var config = {
-  apiKey: "AIzaSyAjNdP0-YIlfcWvchezd7_NIGCb7lygvsY",
-  authDomain: "carwashapp-4fa12.firebaseapp.com",
-  databaseURL: "https://carwashapp-4fa12.firebaseio.com",
-  projectId: "carwashapp-4fa12",
-  storageBucket: "carwashapp-4fa12.appspot.com",
-  messagingSenderId: "766383790377"
-};
 
 @Component({
   templateUrl: 'app.html'
@@ -37,7 +29,7 @@ export class MyApp {
       statusBar.styleDefault();
       splashScreen.hide();
     });
-    firebase.initializeApp(config);
+ 
     this.pages = [
       {title: 'home', component:HomePage, icon:'home'},
       {title: 'editProfile', component:EditProfilePage, icon:'person'},

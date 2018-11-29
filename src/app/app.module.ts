@@ -11,7 +11,18 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { AuthProvider } from '../providers/auth/auth';
-
+import { CarwashProvider } from '../providers/carwash/carwash';
+import { EntertainmentProvider } from '../providers/entertainment/entertainment';
+import * as firebase from 'firebase';
+var config = {
+  apiKey: "AIzaSyAjNdP0-YIlfcWvchezd7_NIGCb7lygvsY",
+  authDomain: "carwashapp-4fa12.firebaseapp.com",
+  databaseURL: "https://carwashapp-4fa12.firebaseio.com",
+  projectId: "carwashapp-4fa12",
+  storageBucket: "carwashapp-4fa12.appspot.com",
+  messagingSenderId: "766383790377"
+};
+firebase.initializeApp(config);
 @NgModule({
   declarations: [
     MyApp,
@@ -38,7 +49,9 @@ import { AuthProvider } from '../providers/auth/auth';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AuthProvider
+    AuthProvider,
+    CarwashProvider,
+    EntertainmentProvider
   ]
 })
 export class AppModule {}
