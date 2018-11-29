@@ -22,8 +22,11 @@ export class HomePage {
   location:string;
   openHours:Time;
   closinghours:Time;
-  satrdayHrs:Time;
-  sundayHrs:Time;
+  satrdayHrsOpen:Time;
+  satrdayHrsclose:Time;
+  sundayHrsOpen:Time;
+  sundayHrsClose:Time;
+  
   entertainmentAvailable:boolean;
 
   constructor(public navCtrl: NavController,private carwashPro:CarwashProvider) {
@@ -58,8 +61,10 @@ sortedByCard(i:number){
       location:this.location,
        openHours:this.openHours,
       closinghours:this.closinghours,
-      satrdayHrs:this.satrdayHrs,
-       sundayHrs:this.sundayHrs,
+      satrdayHrsOpen:this.satrdayHrsOpen,
+      satrdayHrsclose:this.satrdayHrsclose,
+      sundayHrsOpen:this.sundayHrsOpen,
+      sundayHrsClose:this.sundayHrsClose,
        entertainmentAvailable:this.entertainmentAvailable
          
         })

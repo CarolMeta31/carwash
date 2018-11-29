@@ -108,110 +108,13 @@
                         </ion-item>
               
 
+                        <button ion-button  round (click)="entertainSave()" >save</button>
 
               </ion-card-content>
             </ion-card>
     
 
-         
-    
-
-     
-
-          
-
-       
-       
-    
-     
-
-       
-   
-    
-  
-<ion-label>1.What kind of entertainment are you situted next to?</ion-label>
-  <ion-list >
-
-    <ion-item  class="items" no-lines>
-      <ion-label>Pub/Lounge</ion-label>
-      <ion-checkbox color="primary" checked="false" [(ngModel)]="entertainmentPub"></ion-checkbox>
-    </ion-item>
-
-    <ion-item  class="items" no-lines>
-      <ion-label>Park</ion-label>
-      <ion-checkbox color="primary" checked="false" [(ngModel)]="entertainmentPark"></ion-checkbox>
-    </ion-item>
-
-    <ion-item class="items" no-lines>   
-      <ion-label>Restaurant</ion-label>
-      <ion-checkbox color="primary" checked="false" [(ngModel)]="entertainmentRes"></ion-checkbox>
-    </ion-item>
-
-    <ion-item class="items" no-lines> 
-      <ion-label>Other</ion-label>
-      <ion-checkbox color="primary" checked="false" [(ngModel)]="entertainmentOther"></ion-checkbox>
-    </ion-item>
-  </ion-list>
- <ion-label text-wrap>2.What are the  operational hours of the entertainment place?</ion-label>
-   <ion-row>
-     <ion-col col-6>
-        <ion-label>Opening Hours</ion-label>
-        <ion-item class="items"  no-lines>
-        <ion-select name="d" class="myselect" [(ngModel)]="openHours"  >
-          <ion-option value="08:00am">8:00am</ion-option>
-          <ion-option value="09:00am">9:00am</ion-option>
-          <ion-option value="10:00am">10:00am</ion-option>
-          <ion-option value="11:00am">11:00am</ion-option>
-        </ion-select>
-      </ion-item>
-    </ion-col>
-   
-<ion-col col-6>
-    <ion-label>Closing Hours</ion-label>
-    <ion-item class="items"  no-lines>
-    <ion-select  [(ngModel)]="closinghours" >
-      <ion-option  value="18:00pm">18:00pm</ion-option>
-      <ion-option  value="19:00pm">19:00pm</ion-option>
-      <ion-option  value="20:00am">20:00pm</ion-option>
-      <ion-option  value="21:00am">21:00pm</ion-option>
-    </ion-select>
-  </ion-item>
-</ion-col>
-</ion-row>
-
-<ion-label text-wrap>3.What are your operational hours on weekends?</ion-label>
-<ion-row>
-<ion-col col-6>
-  <ion-label>Saturday Hours</ion-label>
-  <ion-item class="items"  no-lines>
-  <ion-select  name="d" class="myselect" [(ngModel)]="satrdayHrs" text-wrap>
-    <ion-option  value="08:00am" text-wrap >08:00am-19:00pm</ion-option>
-    <ion-option  value="09:30am">09:30am-21:30pm</ion-option>
-    <ion-option  value="10:15am">10:15am-23:15pm</ion-option>
-  </ion-select>
-</ion-item>
-</ion-col>
-
-<ion-col col-6>
-  <ion-label>Sunday Hours</ion-label>
-  <ion-item class="items"  no-lines>
-  <ion-select  name="d" class="myselect" [(ngModel)]="sundayHrs" >
-    <ion-option  value="09:00am">09:00am-17:00pm</ion-option>
-    <ion-option  value="10:30am">10:30am-18:30pm</ion-option>
-    <ion-option  value="11:15am">11:15am-20:15pm</ion-option>
-  </ion-select>
-</ion-item>
-</ion-col>
 
 
 
-</ion-row>
-
-
-
-
-
-
-<button ion-button  round (click)="entertainSave()" >save</button>
-</ion-content>
 

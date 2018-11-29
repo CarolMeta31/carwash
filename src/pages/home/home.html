@@ -23,7 +23,7 @@
               </ion-card-header>
             <ion-card-content>
                 <ion-item>
-                    <ion-input type="text" value="" placeholder="E.g Mbizo Carwash"></ion-input>
+                    <ion-input type="text" value="" placeholder="E.g Mbizo Carwash" [(ngModel)]="carwashName"></ion-input>
                   </ion-item>
             </ion-card-content>
           </ion-card>
@@ -36,7 +36,7 @@
               </ion-card-header>
               <ion-card-content>
                   <ion-item>
-                      <ion-input type="text" value="" placeholder="E.g Tembisa"></ion-input>
+                      <ion-input type="text" value="" placeholder="E.g Tembisa"  [(ngModel)]="location"></ion-input>
                     </ion-item>
               </ion-card-content>
           </ion-card>
@@ -56,7 +56,7 @@
                 <ion-label text-wrap >Open</ion-label>
               
 
-                <ion-select name="d" class="myselect" [(ngModel)]="openinghours">
+                <ion-select name="d" class="myselect" [(ngModel)]="openHours">
 
                     <ion-option value="8:0">8:00</ion-option>
                     <ion-option value="9:0">9:00</ion-option>
@@ -94,7 +94,7 @@
               </ion-item>
               <ion-item>
                 <ion-label text-wrap >Open</ion-label>
-                  <ion-select name="d" class="myselect" [(ngModel)]="openinghours">
+                  <ion-select name="d" class="myselect" [(ngModel)]="satrdayHrsOpen">
   
                       <ion-option value="8:00">8:00</ion-option>
                       <ion-option value="9:00">9:00</ion-option>
@@ -106,7 +106,7 @@
               <ion-item>
   
                   <ion-label text-wrap >Close</ion-label>
-                    <ion-select [(ngModel)]="closinghours">
+                    <ion-select [(ngModel)]="satrdayHrsclose">
                           
                         <ion-option  value="18:00">18:00</ion-option>
                         <ion-option  value="19:00">19:00</ion-option>
@@ -121,7 +121,7 @@
               </ion-item>
               <ion-item>
                   <ion-label text-wrap >Open</ion-label>
-                    <ion-select name="d" class="myselect" [(ngModel)]="openinghours">
+                    <ion-select name="d" class="myselect" [(ngModel)]="sundayHrsOpen">
     
                         <ion-option value="8:00a">8:00</ion-option>
                         <ion-option value="9:00a">9:00</ion-option>
@@ -133,7 +133,7 @@
                 <ion-item>
     
                     <ion-label text-wrap >Close</ion-label>
-                      <ion-select [(ngModel)]="closinghours">
+                      <ion-select [(ngModel)]="sundayHrsClose">
                             
                           <ion-option  value="18:00p">18:00</ion-option>
                           <ion-option  value="19:00p">19:00</ion-option>
@@ -158,7 +158,7 @@
               <ion-card-content>
                   <ion-item>
                     <ion-label  text-wrap>Select:</ion-label>
-                      <ion-select [(ngModel)]="entertainment">
+                      <ion-select [(ngModel)]="entertainmentAvailable">
                         <ion-option value="yes">Yes</ion-option>
                         <ion-option value="no">No</ion-option>
                       </ion-select>
@@ -174,12 +174,12 @@
                 <!-- <img src="./assets/imgs/cashwash.png"/> -->
                   
               </ion-card>
-           <ion-card *ngIf="entertainment=='yes'"align="center" class="ent" (click)="sortedByCard(1)">
+           <!-- <ion-card *ngIf="entertainmentAvailable=='yes'" align="center" class="ent" (click)="sortedByCard(1)">
               <ion-card-header>Entertainment</ion-card-header>
                 <!-- <ion-item class="img">
                   <!-- <img src="./assets/imgs/entertainment.png"/> -->
                 <!-- </ion-item> -->
-            </ion-card>
+            <!-- </ion-card> --> 
 
             <ion-card align="center" class="ent" (click)="next()">
               <ion-card-header>Car details</ion-card-header>
@@ -187,7 +187,7 @@
             </ion-card>
         </ion-list>
 
-
+        <button ion-button  round (click)="save()" >save</button>
     </div>
     
       </ion-content>

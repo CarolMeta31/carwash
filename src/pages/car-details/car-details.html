@@ -11,6 +11,19 @@
 
   <div class="container" align="center">
 
+      <ion-card>
+          <ion-card-header>
+            <ion-item>
+                <ion-label text-wrap>What type of entertianment area are you situated next too?</ion-label>
+            </ion-item>
+            </ion-card-header>
+          <ion-card-content>
+              <ion-item>
+                  <ion-input type="text" value="" placeholder="E.g pub/park" [(ngModel)]="entertainmentArea"></ion-input>
+                </ion-item>
+          </ion-card-content>
+        </ion-card>
+
         <ion-card>
             <ion-card-header>
                 <ion-item no-lines>
@@ -21,27 +34,27 @@
                 <ion-list no-lines>
                     <ion-item>
                       <ion-label>Sedan</ion-label>
-                      <ion-input type="number"></ion-input>
+                      <ion-input type="number" [(ngModel)]="numberOfCarsSedan"></ion-input>
                     </ion-item>
                     
                     <ion-item>
                         <ion-label>Suv</ion-label>
-                        <ion-input type="number"></ion-input>
+                        <ion-input type="number" [(ngModel)]=" numberOfCarsSuv"></ion-input>
                     </ion-item>
                     
                     <ion-item>
                         <ion-label>Van</ion-label>
-                        <ion-input type="number"></ion-input>
+                        <ion-input type="number" [(ngModel)]="numberOfCarsVan"></ion-input>
                     </ion-item>
                   
                     <ion-item>
                         <ion-label>Mini-bus</ion-label>
-                        <ion-input type="number"></ion-input>
+                        <ion-input type="number" [(ngModel)]="numberOfCarsMini"></ion-input>
                     </ion-item>
                     
                     <ion-item>
                         <ion-label>Truck/van</ion-label>
-                        <ion-input type="number"></ion-input>
+                        <ion-input type="number" [(ngModel)]="numberOfCarsTruck"></ion-input>
                     </ion-item>
                   </ion-list>
             </ion-card-content>
@@ -57,12 +70,12 @@
                   <ion-list>
                       <ion-item>
                           <ion-label>Males</ion-label>
-                          <ion-input type="number"></ion-input>
+                          <ion-input type="number" [(ngModel)]="maleEmployees"></ion-input>
                         </ion-item>
                         
                         <ion-item>
                             <ion-label>Female</ion-label>
-                            <ion-input type="number"></ion-input>
+                            <ion-input type="number" [(ngModel)]="femaleEmployees" ></ion-input>
                         </ion-item>
                     </ion-list>
               </ion-card-content>
@@ -75,20 +88,20 @@
                       </ion-item>
                 </ion-card-header>
                 <ion-card-content>
-                    <ion-list radio-group>
+                    <ion-list radio-group [(ngModel)]="moneyMade">
                         <ion-item>
                           <ion-label>R500-R1000</ion-label>
-                          <ion-radio value="go"></ion-radio>
+                          <ion-radio value="R500-R1000" ></ion-radio>
                         </ion-item>
                       
                         <ion-item>
                           <ion-label>R1000-R2500</ion-label>
-                          <ion-radio value="rust"></ion-radio>
+                          <ion-radio value="R1000-R2500"></ion-radio>
                         </ion-item>
                       
                         <ion-item>
                           <ion-label>R2500+</ion-label>
-                          <ion-radio value="python"></ion-radio>
+                          <ion-radio value="R2500+"></ion-radio>
                         </ion-item>
                   </ion-list>
                 </ion-card-content>
