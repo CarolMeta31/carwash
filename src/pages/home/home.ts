@@ -1,3 +1,4 @@
+import { CarPage } from './../car/car';
 import { CarwashProvider } from './../../providers/carwash/carwash';
 import { EntertainmentPage } from './../entertainment/entertainment';
 import { CarDetailsPage } from './../car-details/car-details';
@@ -7,6 +8,7 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/database';
 import { Time } from '@angular/common';
+
 @Component({
     selector: 'page-home',
     templateUrl: 'home.html'
@@ -27,6 +29,11 @@ export class HomePage {
   constructor(public navCtrl: NavController,private carwashPro:CarwashProvider) {
 
   }
+
+  next(){
+    this.navCtrl.push(CarPage);
+  }
+
 sortedByCards(i:number){
   this.category=[];
   this.category = ['CarWashDetails'];

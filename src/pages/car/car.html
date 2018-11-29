@@ -6,103 +6,190 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>car</ion-title>
-  </ion-navbar>
-  <ion-toolbar no-border-top>
-      <ion-segment [(ngModel)]="suv">
-        <ion-segment-button value="suv">
-          SUV
-        </ion-segment-button>
-        <ion-segment-button value="sedan">
-          Sedan
-        </ion-segment-button>
-        <ion-segment-button value="mini">
-          Mini-Bus
-        </ion-segment-button>
-
-        <ion-segment-button value="van">
-          Van
-        </ion-segment-button>
-        <ion-segment-button value="truck">
-          Truck
-        </ion-segment-button>
-
-
-      </ion-segment>
-    </ion-toolbar>
+    <ion-navbar>
+      <ion-title>car</ion-title>
+    </ion-navbar>
+    <ion-toolbar no-border-top>
+        <ion-segment [(ngModel)]="suv">
+          <ion-segment-button value="suv">
+            SUV
+          </ion-segment-button>
+          <ion-segment-button value="sedan">
+            Sedan
+          </ion-segment-button>
+          <ion-segment-button value="mini">
+            Mini-Bus
+          </ion-segment-button>
   
-</ion-header>
-
-
-<ion-content padding>
-
-    <div [ngSwitch]="suv">
-        <ion-list *ngSwitchCase="'suv'">
-       
-            <ion-item>
-                <ion-label text-wrap floating >how long does it take to wash the car?</ion-label>
-                <ion-input type="text" value=""></ion-input>
-            </ion-item>
-
-            <ion-item>
-                <ion-label text-wrap floating >how much does it cost to wash the car?</ion-label>
-                <ion-input type="text" value=""></ion-input>
-              </ion-item>
-       
-        </ion-list>
+          <ion-segment-button value="van">
+            Van
+          </ion-segment-button>
+          <ion-segment-button value="truck">
+            Truck
+          </ion-segment-button>
+  
+  
+        </ion-segment>
+      </ion-toolbar>
     
-        <ion-list *ngSwitchCase="'sedan'">
-          
-            <ion-item>
-                <ion-label text-wrap floating >how long does it take to wash the car?</ion-label>
-                <ion-input type="text" value=""></ion-input>
-            </ion-item>
-
-            <ion-item>
-                <ion-label text-wrap floating >how much does it cost to wash the car?</ion-label>
-                <ion-input type="text" value=""></ion-input>
-              </ion-item>
-       
-
-        </ion-list>
-    
-        <ion-list *ngSwitchCase="'mini'">
+  </ion-header>
+  
+  
+  <ion-content padding>
+  
+      <div [ngSwitch]="suv">
+          <ion-list *ngSwitchCase="'suv'">
          
-            <ion-item>
-                <ion-label text-wrap floating >how long does it take to wash the car?</ion-label>
-                <ion-input type="text" value=""></ion-input>
-            </ion-item>
-
-            <ion-item>
-                <ion-label text-wrap floating >how much does it cost to wash the car?</ion-label>
-                <ion-input type="text" value=""></ion-input>
-              </ion-item>
-       
-          
-        </ion-list>
-        <ion-list *ngSwitchCase="'van'">
-            <ion-item>
-                <ion-label text-wrap floating >how long does it take to wash the car?</ion-label>
-                <ion-input type="text" value=""></ion-input>
-            </ion-item>
-
-            <ion-item>
-                <ion-label text-wrap floating >how much does it cost to wash the car?</ion-label>
-                <ion-input type="text" value=""></ion-input>
-              </ion-item>
-        </ion-list>
-        <ion-list  *ngSwitchCase="'truck'">
-            <ion-item>
-                <ion-label text-wrap floating >how long does it take to wash the car?</ion-label>
-                <ion-input type="text" value=""></ion-input>
-            </ion-item>
-
-            <ion-item>
-                <ion-label text-wrap floating >how much does it cost to wash the car?</ion-label>
-                <ion-input type="text" value=""></ion-input>
-              </ion-item>
+              <ion-card>
+                    <ion-card-header>
+                      <ion-item>
+                          <ion-label text-wrap>how long does it take to wash the car?</ion-label>
+                      </ion-item>
+                    </ion-card-header>
+                    <ion-card-content>
+                        <ion-item>
+                            <ion-input type="text" value="" placeholder="E.g 30min"></ion-input>
+                        </ion-item>
+                    </ion-card-content>
+                </ion-card>
+  
+                <ion-card>
+                    <ion-card-header>
+                      <ion-item>
+                          <ion-label text-wrap>how much does it cost to wash the car?</ion-label>
+                      </ion-item>
+                    </ion-card-header>
+                    <ion-card-content>
+                        <ion-item>
+                            <ion-input type="text" value="" placeholder="E.g R30"></ion-input>
+                        </ion-item>
+                    </ion-card-content>
+                </ion-card>
+            
+             
+              
+         
           </ion-list>
-      </div>
-
-</ion-content>
+      
+          <ion-list *ngSwitchCase="'sedan'">
+  
+              <ion-card>
+                  <ion-card-header>
+                    <ion-item>
+                        <ion-label text-wrap>how long does it take to wash the car?</ion-label>
+                    </ion-item>
+                  </ion-card-header>
+                  <ion-card-content>
+                      <ion-item>
+                          <ion-input type="text" value=""  placeholder="E.g 30min"></ion-input>
+                      </ion-item>
+                  </ion-card-content>
+              </ion-card>
+  
+              <ion-card>
+                  <ion-card-header>
+                      <ion-item>
+                          <ion-label text-wrap>how much does it cost to wash the car?</ion-label>
+                      </ion-item>
+                  </ion-card-header>
+                  <ion-card-content>
+                      <ion-item>
+                          <ion-input type="text" value="" placeholder="E.g R30"></ion-input>
+                      </ion-item>
+                  </ion-card-content>
+              </ion-card>
+            
+  
+          </ion-list>
+      
+          <ion-list *ngSwitchCase="'mini'">
+           
+              
+              <ion-card>
+                  <ion-card-header>
+                    <ion-item>
+                        <ion-label text-wrap>how long does it take to wash the car?</ion-label>
+                    </ion-item>
+                  </ion-card-header>
+                  <ion-card-content>
+                      <ion-item>
+                          <ion-input type="text" value=""  placeholder="E.g 30min"></ion-input>
+                      </ion-item>
+                  </ion-card-content>
+              </ion-card>
+  
+              <ion-card>
+                  <ion-card-header>
+                      <ion-item>
+                          <ion-label text-wrap>how much does it cost to wash the car?</ion-label>
+                      </ion-item>
+                  </ion-card-header>
+                  <ion-card-content>
+                      <ion-item>
+                          <ion-input type="text" value="" placeholder="E.g R30"></ion-input>
+                      </ion-item>
+                  </ion-card-content>
+              </ion-card>
+         
+            
+          </ion-list>
+          <ion-list *ngSwitchCase="'van'">
+            
+              <ion-card>
+                  <ion-card-header>
+                    <ion-item>
+                        <ion-label text-wrap>how long does it take to wash the car?</ion-label>
+                    </ion-item>
+                  </ion-card-header>
+                  <ion-card-content>
+                      <ion-item>
+                          <ion-input type="text" value=""  placeholder="E.g 30min"></ion-input>
+                      </ion-item>
+                  </ion-card-content>
+              </ion-card>
+  
+              <ion-card>
+                  <ion-card-header>
+                      <ion-item>
+                          <ion-label text-wrap>how much does it cost to wash the car?</ion-label>
+                      </ion-item>
+                  </ion-card-header>
+                  <ion-card-content>
+                      <ion-item>
+                          <ion-input type="text" value="" placeholder="E.g R30"></ion-input>
+                      </ion-item>
+                  </ion-card-content>
+              </ion-card>
+          </ion-list>
+          <ion-list  *ngSwitchCase="'truck'">
+             
+              <ion-card>
+                  <ion-card-header>
+                    <ion-item>
+                        <ion-label text-wrap>how long does it take to wash the car?</ion-label>
+                    </ion-item>
+                  </ion-card-header>
+                  <ion-card-content>
+                      <ion-item>
+                          <ion-input type="text" value=""  placeholder="E.g 30min"></ion-input>
+                      </ion-item>
+                  </ion-card-content>
+              </ion-card>
+  
+              <ion-card>
+                  <ion-card-header>
+                      <ion-item>
+                          <ion-label text-wrap>how much does it cost to wash the car?</ion-label>
+                      </ion-item>
+                  </ion-card-header>
+                  <ion-card-content>
+                      <ion-item>
+                          <ion-input type="text" value=""  placeholder="E.g R30"></ion-input>
+                      </ion-item>
+                  </ion-card-content>
+              </ion-card>
+            </ion-list>
+        </div>
+  
+  </ion-content>
+  
