@@ -17,6 +17,7 @@ export class CarDetailsPage {
 
 
   //carwash details declaration
+  entertainmentArea:string;
   numberOfCarsSedan:number;
   numberOfCarsSuv:number;
   numberOfCarsVan:number;
@@ -41,7 +42,7 @@ export class CarDetailsPage {
      
      
    
-
+      entertainmentArea:this.entertainmentArea,
       numberOfCarsSedan:this.numberOfCarsSedan,
       numberOfCarsSuv:this.numberOfCarsSuv,
       numberOfCarsVan:this.numberOfCarsVan,
