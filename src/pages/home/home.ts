@@ -8,6 +8,7 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/database';
 import { Time } from '@angular/common';
+import {FormControl} from '@angular/forms';
 
 @Component({
     selector: 'page-home',
