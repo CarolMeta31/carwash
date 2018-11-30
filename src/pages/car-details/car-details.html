@@ -101,31 +101,7 @@
               </ion-card-content>
             </ion-card>
 
-            <ion-card>
-                <ion-card-header class="que">
-                    <ion-item no-lines>
-                        <ion-label text-wrap>How much profit do you make a day?</ion-label>
-                      </ion-item>
-                </ion-card-header>
-                <ion-card-content>
-                    <ion-list radio-group [(ngModel)]="moneyMade">
-                        <ion-item>
-                          <ion-label>R500-R1000</ion-label>
-                          <ion-radio value="R500-R1000" ></ion-radio>
-                        </ion-item>
-                      
-                        <ion-item>
-                          <ion-label>R1000-R2500</ion-label>
-                          <ion-radio value="R1000-R2500"></ion-radio>
-                        </ion-item>
-                      
-                        <ion-item>
-                          <ion-label>R2500+</ion-label>
-                          <ion-radio value="R2500+"></ion-radio>
-                        </ion-item>
-                  </ion-list>
-                </ion-card-content>
-              </ion-card>
+        
 
               <button ion-button outline color="twittwer"  round (click)="saveCarDetails()" >save</button>
 
