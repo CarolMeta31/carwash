@@ -28,7 +28,7 @@ export class HomePage {
   sundayHrsOpen:Time;
   sundayHrsClose:Time;
   
-  entertainmentAvailable:boolean;
+
 
   constructor(public navCtrl: NavController,private carwashPro:CarwashProvider) {
 
@@ -66,7 +66,7 @@ sortedByCard(i:number){
       satrdayHrsclose:this.satrdayHrsclose,
       sundayHrsOpen:this.sundayHrsOpen,
       sundayHrsClose:this.sundayHrsClose,
-       entertainmentAvailable:this.entertainmentAvailable
+     
          
         })
 

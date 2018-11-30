@@ -12,19 +12,19 @@ import 'firebase/database';
   templateUrl: 'entertainment.html',
 })
 export class EntertainmentPage {
+// category=[]
+//   entertainmentInformation=[];
+//   openHours:Time;
+//   closinghours:Time;
+//   satrdayHrs:Time;
+//   sundayHrs:Time;
 
-  entertainmentInformation=[];
-  openHours:Time;
-  closinghours:Time;
-  satrdayHrs:Time;
-  sundayHrs:Time;
+//   entertainmentPub:string;
+//   entertainmentPark:string; 
+//   entertainmentRes:string;
+//   entertainmentOther:string;
 
-  entertainmentPub:string;
-  entertainmentPark:string; 
-  entertainmentRes:string;
-  entertainmentOther:string;
-
-      noOfEmployees:number;
+//       noOfEmployees:number;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -32,18 +32,19 @@ export class EntertainmentPage {
     console.log('ionViewDidLoad EntertainmentPage');
   }
 
-  entertainSave(){
-    firebase.database().ref(`/entertainment`).push().set({
-    
-      openHours:this.openHours,
-      closinghours:this.closinghours,
-      satrdayHrs:this.satrdayHrs,
-      sundayHrs:this.sundayHrs,
-      
-    entertainmentPub:this.entertainmentPub,
-     entertainmentPark:this.entertainmentPark, 
-       entertainmentRes:this.entertainmentRes,
-       entertainmentOther:this.entertainmentOther
-    })
-  }
 }
+  // entertainSave(){
+  //   firebase.database().ref(`/entertainment`).push().set({
+    
+  //     openHours:this.openHours,
+  //     closinghours:this.closinghours,
+  //     satrdayHrs:this.satrdayHrs,
+  //     sundayHrs:this.sundayHrs,
+      
+  //   entertainmentPub:this.entertainmentPub,
+  //    entertainmentPark:this.entertainmentPark, 
+  //      entertainmentRes:this.entertainmentRes,
+  //      entertainmentOther:this.entertainmentOther
+  //   })
+  // }
+

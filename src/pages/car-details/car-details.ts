@@ -26,7 +26,7 @@ export class CarDetailsPage {
   maleEmployees:number;
   femaleEmployees:number;
   moneyMade:string;
-
+  entertainmentAvailable:boolean;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
   }
@@ -41,7 +41,7 @@ export class CarDetailsPage {
     firebase.database().ref(`/carwashDetails`).push().set({
      
      
-   
+    entertainmentAvailable:this.entertainmentAvailable,
       entertainmentArea:this.entertainmentArea,
       numberOfCarsSedan:this.numberOfCarsSedan,
       numberOfCarsSuv:this.numberOfCarsSuv,
@@ -52,6 +52,7 @@ export class CarDetailsPage {
       maleEmployees:this.maleEmployees,
        femaleEmployees:this.femaleEmployees,
        moneyMade:this.moneyMade,
+        
     })
 
    

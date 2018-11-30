@@ -12,15 +12,34 @@
 
   <div class="container" align="center">
 
-      <ion-card>
+
+ <ion-card>
+              <ion-card-header class="que">
+                <ion-item>
+                  <ion-label text-wrap>Is the car wash situated near an entertainment place?</ion-label>
+                </ion-item>
+
+              </ion-card-header>
+              <ion-card-content>
+                  <ion-item>
+                    <ion-label  text-wrap>Select:</ion-label>
+                      <ion-select [(ngModel)]="entertainmentAvailable">
+                        <ion-option value="yes">Yes</ion-option>
+                        <ion-option value="no">No</ion-option>
+                      </ion-select>
+                  </ion-item>
+              </ion-card-content>
+
+          </ion-card>
+      <ion-card *ngIf="entertainmentAvailable=='yes'">
           <ion-card-header>
             <ion-item>
-                <ion-label text-wrap>What type of entertianment area are you situated next too?</ion-label>
+                <ion-label text-wrap>What type of entertianment area are you situated next to?</ion-label>
             </ion-item>
             </ion-card-header>
           <ion-card-content>
               <ion-item>
-                  <ion-input type="text" value="" placeholder="E.g pub/park" [(ngModel)]="entertainmentArea"></ion-input>
+                  <ion-input  type="text" value="" placeholder="E.g pub/park" [(ngModel)]="entertainmentArea"></ion-input>
                 </ion-item>
           </ion-card-content>
         </ion-card>
