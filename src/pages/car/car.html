@@ -5,7 +5,7 @@
       <ion-title>car</ion-title>
     </ion-navbar>
     <ion-toolbar no-border-top>
-        <ion-segment [(ngModel)]="suv">
+        <ion-segment [(ngModel)]="car">
           <ion-segment-button value="suv">
             SUV
           </ion-segment-button>
@@ -32,7 +32,7 @@
   
   <ion-content padding>
   
-      <div [ngSwitch]="suv">
+      <div [ngSwitch]="car">
           <ion-list *ngSwitchCase="'suv'">
          
               <ion-card>
@@ -61,9 +61,10 @@
                     </ion-card-content>
                 </ion-card>
             
-             
-              
-         
+                <ion-fab right bottom>
+                    <button ion-fab mini (click)="nextsed()"><ion-icon name="arrow-forward"></ion-icon></button>
+                </ion-fab>
+
           </ion-list>
       
           <ion-list *ngSwitchCase="'sedan'">
@@ -94,6 +95,13 @@
                   </ion-card-content>
               </ion-card>
             
+            <ion-fab right bottom>
+                <button ion-fab mini (click)="nextmin()"><ion-icon name="arrow-forward"></ion-icon></button>
+            </ion-fab>
+
+            <ion-fab left bottom>
+                <button ion-fab mini (click)="nextsuv()"><ion-icon name="arrow-back"></ion-icon></button>
+            </ion-fab>
   
           </ion-list>
       
@@ -126,6 +134,13 @@
                   </ion-card-content>
               </ion-card>
          
+                <ion-fab right bottom>
+                    <button ion-fab mini (click)="nextvan()"><ion-icon name="arrow-forward"></ion-icon></button>
+                </ion-fab>
+
+                <ion-fab left bottom>
+                    <button ion-fab mini (click)="nextsed()"><ion-icon name="arrow-back"></ion-icon></button>
+                </ion-fab>
             
           </ion-list>
           <ion-list *ngSwitchCase="'van'">
@@ -155,6 +170,15 @@
                       </ion-item>
                   </ion-card-content>
               </ion-card>
+
+              <ion-fab right bottom>
+                <button ion-fab mini (click)="nexttruck()"><ion-icon name="arrow-forward"></ion-icon></button>
+            </ion-fab>
+
+            <ion-fab left bottom>
+                <button ion-fab mini (click)="nextmin()"><ion-icon name="arrow-back"></ion-icon></button>
+            </ion-fab>
+
           </ion-list>
           <ion-list  *ngSwitchCase="'truck'">
              
@@ -194,6 +218,11 @@
                  miniCost,
                  vanCost,
                  truckCost)" >save all details</button>
+
+                 <ion-fab left bottom>
+                    <button ion-fab mini (click)="nextvan()"><ion-icon name="arrow-back"></ion-icon></button>
+                </ion-fab>
+
             </ion-list>
         </div>
   
