@@ -1,3 +1,4 @@
+import { WelcomePage } from './../pages/welcome/welcome';
 import { HomePage } from './../pages/home/home';
 import { EditProfilePage } from './../pages/edit-profile/edit-profile';
 import { LoginPage } from './../pages/login/login';
@@ -16,7 +17,7 @@ import { AuthProvider } from './../providers/auth/auth';
 })
 export class MyApp {
   
-  rootPage:any = HomePage;
+  rootPage:any = LoginPage;
 
 
   

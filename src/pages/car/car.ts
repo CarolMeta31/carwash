@@ -1,3 +1,4 @@
+import { CarwashProvider } from './../../providers/carwash/carwash';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -26,26 +27,42 @@ export class CarPage {
   vanCost:string;
   truckCost:string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, 
+    public navParams: NavParams,private carsPro:CarwashProvider) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CarPage');
   }
 
-  carsInformation(){
-    firebase.database().ref(`/carsOperationsDetails`).push().set({
-      suvDuration:this.suvDuration,
-      sedanDuration:this.sedanDuration,
-      miniDuration:this.miniDuration,
-      vanDuration:this.vanDuration,
-      truckDuration:this.truckDuration,
+  createCarsDetail(
+    suvDuration:number,
+    sedanDuration:number,
+    miniDuration:number,
+    vanDuration:number,
+    truckDuration:number,
+
+    suvCost:string,
+    sedanCost:string,
+     miniCost:string,
+     vanCost:string,
+     truckCost:string,
     
-      suvCost:this.suvCost,
-      sedanCost:this.sedanCost,
-      miniCost:this.miniCost,
-      vanCost:this.vanCost,
-      truckCost:this.truckCost
+): void {
+  this.carsPro
+    .createCarsDetails(suvDuration,
+      sedanDuration,
+      miniDuration,
+      vanDuration,
+      truckDuration,
+  
+      suvCost,
+      sedanCost,
+       miniCost,
+       vanCost,
+       truckCost,)
+    .then(newEvent => {
+      this.navCtrl.pop();
     });
   }
 

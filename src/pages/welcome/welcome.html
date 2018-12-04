@@ -1,0 +1,21 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>welcome</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="logOut()">
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button block color="primary" (click)="goToCreate()">
+    add new data
+  </button>
+
+  <button ion-button block color="primary" (click)="goToList()">
+    See your captured data
+  </button>
+</ion-content>

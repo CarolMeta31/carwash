@@ -151,6 +151,16 @@
           </ion-card>
         
           
-    <button ion-button  round (click)="save()" >save</button>
+          <button ion-button block 
+          (click)="createMainDetails(carwashName,
+          location,
+          openHours,
+          closinghours,
+          satrdayHrsOpen,
+          satrdayHrsclose,
+          sundayHrsOpen,
+          sundayHrsClose)">
+          add carwash info
+        </button>
   </div>
 </ion-content>
