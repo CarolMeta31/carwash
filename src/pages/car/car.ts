@@ -14,7 +14,7 @@ import 'firebase/database';
 export class CarPage {
  
   cars=[];
-
+  car='suv';
   suvDuration:number;
   sedanDuration:number;
   miniDuration:number;
@@ -64,5 +64,24 @@ export class CarPage {
     .then(newEvent => {
       this.navCtrl.pop();
     });
-}
+  }
+
+  nextsed(){
+    this.car='sedan';
+  }
+
+  nextmin(){
+    this.car='mini';
+  }
+
+  nextsuv(){
+    this.car='suv'
+  }
+
+  nextvan(){
+    this.car='van'
+  }
+  nexttruck(){
+    this.car='truck'
+  }
 }
