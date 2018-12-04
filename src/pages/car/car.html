@@ -4,39 +4,37 @@
     <ion-navbar>
       <ion-title>car</ion-title>
     </ion-navbar>
+    <ion-toolbar no-border-top>
+        <ion-segment [(ngModel)]="suv">
+          <ion-segment-button value="suv">
+            SUV
+          </ion-segment-button>
+          <ion-segment-button value="sedan">
+            Sedan
+          </ion-segment-button>
+          <ion-segment-button value="mini">
+            Mini-Bus
+          </ion-segment-button>
+  
+          <ion-segment-button value="van">
+            Van
+          </ion-segment-button>
+          <ion-segment-button value="truck">
+            Truck
+          </ion-segment-button>
+  
+  
+        </ion-segment>
+      </ion-toolbar>
+    
   </ion-header>
   
   
   <ion-content padding>
-
-        <div padding>
-            <ion-segment [(ngModel)]="cars">
-              <ion-segment-button value="suv">
-                SUV
-              </ion-segment-button>
-              <ion-segment-button value="sedan">
-                Sedan
-              </ion-segment-button>
-
-              <ion-segment-button value="mini">
-              Mini-Bus
-              </ion-segment-button>
-
-              <ion-segment-button value="van">
-              Van
-              </ion-segment-button>
-
-              <ion-segment-button value="truck">
-               Truck
-              </ion-segment-button>
-            </ion-segment>
-          </div>
-
-
-
-
-        <div [ngSwitch]="cars">
-            <ion-list *ngSwitchCase="'suv'">
+  
+      <div [ngSwitch]="suv">
+          <ion-list *ngSwitchCase="'suv'">
+         
               <ion-card>
                     <ion-card-header class="que">
                       <ion-item>
@@ -178,16 +176,6 @@
                       <ion-item>
                           <ion-label text-wrap>how much does it cost to wash the car?</ion-label>
                       </ion-item>
-
-                    </ion-card-header>
-                    <ion-card-content>
-                        <ion-item>
-                            <ion-input type="text" value="" placeholder="E.g R30" [(ngModel)]="truckCost"></ion-input>
-                        </ion-item>
-                    </ion-card-content>
-                </ion-card>
-                <button ion-button  round (click)="carsInformation()" >save</button>
-
                   </ion-card-header>
                   <ion-card-content>
                       <ion-item>
@@ -206,7 +194,6 @@
                  miniCost,
                  vanCost,
                  truckCost)" >save all details</button>
-
             </ion-list>
         </div>
   
