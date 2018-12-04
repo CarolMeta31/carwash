@@ -17,7 +17,7 @@ import { AuthProvider } from './../providers/auth/auth';
 })
 export class MyApp {
   
-  rootPage:any = WelcomePage;
+  rootPage:any = LoginPage;
 
 
   

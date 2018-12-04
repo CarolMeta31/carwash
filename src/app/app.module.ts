@@ -1,3 +1,5 @@
+import { ResetpasswordPage } from './../pages/resetpassword/resetpassword';
+import { SignupPage } from './../pages/signup/signup';
 import { CarwashListDetailsPage } from './../pages/carwash-list-details/carwash-list-details';
 import { ListDataPage } from './../pages/list-data/list-data';
 import { WelcomePage } from './../pages/welcome/welcome';
@@ -42,7 +44,9 @@ firebase.initializeApp(config);
     MainDetailsPage,
     WelcomePage,
     ListDataPage,
-    CarwashListDetailsPage
+    CarwashListDetailsPage,
+    SignupPage,
+    ResetpasswordPage
   ],
   imports: [
     BrowserModule,
@@ -60,7 +64,9 @@ firebase.initializeApp(config);
     MainDetailsPage,
     WelcomePage,
     ListDataPage,
-    CarwashListDetailsPage
+    CarwashListDetailsPage,
+    SignupPage,
+    ResetpasswordPage
   ],
   providers: [
     StatusBar,
