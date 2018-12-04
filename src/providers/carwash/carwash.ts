@@ -9,63 +9,57 @@ export class CarwashProvider {
 
 
 
-  //main declaration of carwash details
-  carwashName:string;
-  location:string;
-  openHours:Time;
-  closinghours:Time;
-  satrdayHrs:Time;
-  sundayHrs:Time;
-  entertainmentAvailable:boolean;
-
-
-  //carwash details declaration
-  numberOfCarsSedan:number;
-  numberOfCarsSuv:number;
-  numberOfCarsVan:number;
-  numberOfCarsMini:number;
-  numberOfCarsTruck:number;
-  maleEmployees:number;
-  femaleEmployees:number;
-  moneyMade:string;
-
+  public carWashCarDetailsRef: firebase.database.Reference;
 
   constructor() {
+    firebase.auth().onAuthStateChanged(user => {
+      if (user) {
+        this.carWashCarDetailsRef = firebase
+          .database()
+     
+          .ref(`/userProfile/${user.uid}/carDetails/`);
+      }
+    });
     console.log('Hello CarwashProvider Provider');
   }
   
- mainDetails(carwashName,location,openHours,closinghours,satrdayHrs,sundayHrs,entertainmentAvailable){
+  createCarsDetails(
+    suvDuration:number,
+    sedanDuration:number,
+    miniDuration:number,
+    vanDuration:number,
+    truckDuration:number,
 
-  firebase.database().ref(`/MaincarwashDetails`).push().set({
-    carwashName:this.carwashName,
-    location:this.location,
-    openHours:this.openHours,
-    closinghours:this.closinghours,
-    satrdayHrs:this.satrdayHrs,
-    sundayHrs:this.sundayHrs,
-    entertainmentAvailable:this.entertainmentAvailable
-
-  })
- }
- carwashDetails(numberOfCarsSedan,
-  numberOfCarsSuv,
-  numberOfCarsVan,
-  numberOfCarsMini,
-  numberOfCarsTruck,
-  maleEmployees,
-  femaleEmployees,
-  moneyMade){
-
-  firebase.database().ref(`/carwashDetails`).push().set({
-    numberOfCarsSedan:this.numberOfCarsSedan,
-      numberOfCarsSuv:this.numberOfCarsSuv,
-      numberOfCarsVan:this.numberOfCarsVan,
-      numberOfCarsMini:this.numberOfCarsMini,
-      numberOfCarsTruck:this.numberOfCarsTruck,
-
-    maleEmployees:this.maleEmployees,
-     femaleEmployees:this.femaleEmployees,
-     moneyMade:this.moneyMade,
-  })
- }
+    suvCost:string,
+    sedanCost:string,
+     miniCost:string,
+     vanCost:string,
+     truckCost:string,
+    
+   
+  ): firebase.database.ThenableReference {
+    return this.carWashCarDetailsRef.push({
+      durationForSUV:suvDuration,
+      durationForSedan:sedanDuration,
+      durationForMini: miniDuration,
+      durationForVan:vanDuration,
+      durationForTruck:truckDuration,
+  
+     costOfSuv: suvCost,
+     costOfSedan: sedanCost,
+     costOfMini: miniCost,
+     costOfVan: vanCost,
+     costOfTruck: truckCost,
+      
+     
+    });
+  }
+  //listing function
+  getcarsList(): firebase.database.Reference {
+    return this.carWashCarDetailsRef;
+  }
+  // receiving an event’s ID and returning that event
+  getcarsDetail(carwashId:string): firebase.database.Reference {
+    return this.carWashCarDetailsRef.child(carwashId);
+  }
 }

@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      {{currentCarwash?.carwashName}} <strong>CARWASH</strong>
+    </ion-card-header>
+    <ion-card-content>
+      <p>location: <strong>{{currentCarwash?.carwashLocation}}</strong></p>
+      <p>weekday times</p>
+      
+      <p>open: <strong>{{currentCarwash?.weekdayOpen}}</strong></p>
+      
+      <p>close: <strong>{{currentCarwash?.weekdayClose}}</strong></p>
+      <p>saturday times</p>
+      <p> open: <strong>{{currentCarwash?.saturdayOpen}}</strong></p>
+      <p>close: <strong>{{currentCarwash?.saturdayClose}}</strong></p>
+     <p>sunday times</p>
+      <p> open: <strong>{{currentCarwash?.sundayOpen}}</strong></p>
+      <p>close: <strong>{{currentCarwash?.sundayClose}}</strong></p>
+
+     <h2>category 2 OPERATIONAL answers</h2>
+
+       <p>entainment available: <strong>{{currentCarOP?.entertainAvailable}}</strong></p>
+        <p>entertainment area: <strong>{{currentCarOP?.typeOfArea}}</strong></p>
+        <p>number of sedans: <strong>{{currentCarOP?.sedanCars}}</strong></p>
+        <p>number of suv: <strong>{{currentCarOP?.suvCars}}</strong></p>
+        <p>number of van: <strong>{{currentCarOP?.vanCars}}</strong></p>
+        <p>number of mini: <strong>{{currentCarOP?.miniCars}}</strong></p>
+        <p>number of truck: <strong>{{currentCarOP?.truckCars}}</strong></p>
+        <p>number of males: <strong>{{currentCarOP?.males}}</strong></p>
+        <p>number of females: <strong>{{currentCarOP?.females}}</strong></p>
+     
+        <h2>category 3 CAR DETAILS answers</h2>
+        <p>duration of SUV: <strong>{{currentCarsdetail?.durationForSUV}}</strong></p>
+        <p>duartion of SEDAN: <strong>{{currentCarsdetail?.durationForSedan}}</strong></p>
+        <p>duration of MINI-BUS: <strong>{{currentCarsdetail?.durationForMini}}</strong></p>
+        <p>duration of VAN: <strong>{{currentCarsdetail?.durationForVan}}</strong></p>
+        <p>durationof TRUCK: <strong>{{currentCarsdetail?.durationForTruck}}</strong></p>
+        
+        <p>cost of SUV: <strong>{{currentCarsdetail?.costOfSuv}}</strong></p>
+        <p>cost of SEDAN: <strong>{{currentCarsdetail?.costOfSedan}}</strong></p>
+        <p>cost of MINI-BUS: <strong>{{currentCarsdetail?.costOfMini}}</strong></p>
+        <p>cost of VAN: <strong>{{currentCarsdetail?.costOfVan}}</strong></p>
+        <p>cost of TRUCK: <strong>{{currentCarsdetail?.costOfTruck}}</strong></p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -23,7 +23,7 @@
               <ion-card-content>
                   <ion-item>
                     <ion-label  text-wrap>Select:</ion-label>
-                      <ion-select [(ngModel)]="entertainmentAvailable">
+                      <ion-select [(ngModel)]="entertainmentAvail">
                         <ion-option value="yes">Yes</ion-option>
                         <ion-option value="no">No</ion-option>
                       </ion-select>
@@ -31,7 +31,7 @@
               </ion-card-content>
 
           </ion-card>
-      <ion-card *ngIf="entertainmentAvailable=='yes'">
+      <ion-card >
           <ion-card-header>
             <ion-item>
                 <ion-label text-wrap>What type of entertianment area are you situated next to?</ion-label>
@@ -103,7 +103,17 @@
 
         
 
-              <button ion-button outline color="twittwer"  round (click)="saveCarDetails()" >save</button>
+              <button ion-button outline color="twittwer"  round 
+              (click)="saveCarOperationsDetails(
+             entertainmentAvail,
+              entertainmentArea,
+              numberOfCarsSedan,
+              numberOfCarsSuv,
+              numberOfCarsVan,
+              numberOfCarsMini,
+              numberOfCarsTruck,
+              maleEmployees,
+              femaleEmployees)" >save</button>
 
   </div>
 

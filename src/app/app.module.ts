@@ -1,3 +1,6 @@
+import { CarwashListDetailsPage } from './../pages/carwash-list-details/carwash-list-details';
+import { ListDataPage } from './../pages/list-data/list-data';
+import { WelcomePage } from './../pages/welcome/welcome';
 import { MainDetailsPage } from './../pages/main-details/main-details';
 import { CarPage } from './../pages/car/car';
 import { EditProfilePage } from './../pages/edit-profile/edit-profile';
@@ -16,6 +19,8 @@ import { AuthProvider } from '../providers/auth/auth';
 import { CarwashProvider } from '../providers/carwash/carwash';
 import { EntertainmentProvider } from '../providers/entertainment/entertainment';
 import * as firebase from 'firebase';
+import { MainDetailsProvider } from '../providers/main-details/main-details';
+import { OperationalDetailsProvider } from '../providers/operational-details/operational-details';
 var config = {
   apiKey: "AIzaSyAjNdP0-YIlfcWvchezd7_NIGCb7lygvsY",
   authDomain: "carwashapp-4fa12.firebaseapp.com",
@@ -34,7 +39,10 @@ firebase.initializeApp(config);
     LoginPage,
     EditProfilePage,
     CarPage,
-    MainDetailsPage
+    MainDetailsPage,
+    WelcomePage,
+    ListDataPage,
+    CarwashListDetailsPage
   ],
   imports: [
     BrowserModule,
@@ -49,7 +57,10 @@ firebase.initializeApp(config);
     LoginPage,
     EditProfilePage,
     CarPage,
-    MainDetailsPage
+    MainDetailsPage,
+    WelcomePage,
+    ListDataPage,
+    CarwashListDetailsPage
   ],
   providers: [
     StatusBar,
@@ -57,7 +68,9 @@ firebase.initializeApp(config);
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthProvider,
     CarwashProvider,
-    EntertainmentProvider
+    EntertainmentProvider,
+    MainDetailsProvider,
+    OperationalDetailsProvider
   ]
 })
 export class AppModule {}

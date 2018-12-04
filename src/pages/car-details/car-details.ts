@@ -1,3 +1,4 @@
+import { OperationalDetailsProvider } from './../../providers/operational-details/operational-details';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
@@ -17,18 +18,20 @@ export class CarDetailsPage {
 
 
   //carwash details declaration
+  entertainmentAvailable:boolean;
   entertainmentArea:string;
-  numberOfCarsSedan:number;
+   numberOfCarsSedan:number;
   numberOfCarsSuv:number;
   numberOfCarsVan:number;
   numberOfCarsMini:number;
   numberOfCarsTruck:number;
   maleEmployees:number;
   femaleEmployees:number;
-  moneyMade:string;
-  entertainmentAvailable:boolean;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
+
+
+  constructor(public navCtrl: NavController,private operationsPro:OperationalDetailsProvider,
+     public navParams: NavParams, public alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
@@ -36,27 +39,35 @@ export class CarDetailsPage {
   }
 
  
-  saveCarDetails(){
-   
-    firebase.database().ref(`/carwashDetails`).push().set({
-     
-     
-    entertainmentAvailable:this.entertainmentAvailable,
-      entertainmentArea:this.entertainmentArea,
-      numberOfCarsSedan:this.numberOfCarsSedan,
-      numberOfCarsSuv:this.numberOfCarsSuv,
-      numberOfCarsVan:this.numberOfCarsVan,
-      numberOfCarsMini:this.numberOfCarsMini,
-      numberOfCarsTruck:this.numberOfCarsTruck,
-
-      maleEmployees:this.maleEmployees,
-       femaleEmployees:this.femaleEmployees,
-       moneyMade:this.moneyMade,
-        
-    })
-
+  saveCarOperationsDetails(
+    entertainmentAvail:boolean,
+    entertainmentArea:string,
+     numberOfCarsSedan:number,
+    numberOfCarsSuv:number,
+    numberOfCarsVan:number,
+    numberOfCarsMini:number,
+    numberOfCarsTruck:number,
+    maleEmployees:number,
+    femaleEmployees:number,
+  
+  ): void {
+    this.operationsPro
+      .createCarOperationsDetails(entertainmentAvail,
+        entertainmentArea,
+        numberOfCarsSedan,
+        numberOfCarsSuv,
+        numberOfCarsVan,
+        numberOfCarsMini,
+        numberOfCarsTruck,
+        maleEmployees,
+        femaleEmployees)
+      .then(newCarwashOperations => {
+        this.navCtrl.pop();
+      });
+    }
    
     
-   }
+    
+   
 
 }
