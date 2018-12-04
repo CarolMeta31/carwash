@@ -10,37 +10,10 @@
       <ion-title>car</ion-title>
 
     </ion-navbar>
-<<<<<<< HEAD
-=======
-    <ion-toolbar no-border-top>
-        <ion-segment [(ngModel)]="car">
-          <ion-segment-button value="suv">
-            SUV
-          </ion-segment-button>
-          <ion-segment-button value="sedan">
-            Sedan
-          </ion-segment-button>
-          <ion-segment-button value="mini">
-            Mini-Bus
-          </ion-segment-button>
-  
-          <ion-segment-button value="van">
-            Van
-          </ion-segment-button>
-          <ion-segment-button value="truck">
-            Truck
-          </ion-segment-button>
-  
-  
-        </ion-segment>
-      </ion-toolbar>
-    
->>>>>>> 90d0f4082c0d324a992e357ea1ad1f5660f39e10
   </ion-header>
   
   
   <ion-content padding>
-<<<<<<< HEAD
 
         <div padding>
             <ion-segment [(ngModel)]="cars">
@@ -70,12 +43,6 @@
 
         <div [ngSwitch]="cars">
             <ion-list *ngSwitchCase="'suv'">
-=======
-  
-      <div [ngSwitch]="car">
-          <ion-list *ngSwitchCase="'suv'">
-         
->>>>>>> 90d0f4082c0d324a992e357ea1ad1f5660f39e10
               <ion-card>
                     <ion-card-header class="que">
                       <ion-item>
@@ -102,34 +69,12 @@
                         </ion-item>
                     </ion-card-content>
                 </ion-card>
-<<<<<<< HEAD
             </ion-list>
   
 
             <ion-list *ngSwitchCase="'sedan'">
                 <ion-card>
                     <ion-card-header class="que">
-=======
-
-                <ion-fab right bottom>
-                    <button ion-fab mini (click)="nextsed()"><ion-icon name="arrow-forward"></ion-icon></button>
-                </ion-fab>
-
-               
-              
-         
-          </ion-list>
-      
-          <ion-list *ngSwitchCase="'sedan'">
-  
-              <ion-card>
-                  <ion-card-header class="que">
-                    <ion-item>
-                        <ion-label text-wrap>How long does it take to wash the car?</ion-label>
-                    </ion-item>
-                  </ion-card-header>
-                  <ion-card-content>
->>>>>>> 90d0f4082c0d324a992e357ea1ad1f5660f39e10
                       <ion-item>
                           <ion-label text-wrap>how long does it take to wash the car?</ion-label>
                       </ion-item>
@@ -146,7 +91,6 @@
                       <ion-item>
                           <ion-label text-wrap>How much does it cost to wash the car?</ion-label>
                       </ion-item>
-<<<<<<< HEAD
                     </ion-card-header>
                     <ion-card-content>
                         <ion-item>
@@ -160,36 +104,6 @@
             <ion-list *ngSwitchCase="'mini'">
                 <ion-card>
                     <ion-card-header class="que">
-=======
-                  </ion-card-header>
-                  <ion-card-content>
-                      <ion-item>
-                          <ion-input type="text" value="" placeholder="E.g R30" [(ngModel)]="sedanCost"></ion-input>
-                      </ion-item>
-                  </ion-card-content>
-              </ion-card>
-              <ion-fab right bottom>
-                    <button ion-fab mini (click)="nextmin()"><ion-icon name="arrow-forward"></ion-icon></button>
-                </ion-fab>
-
-                <ion-fab left bottom>
-                    <button ion-fab mini (click)="nextsuv()"><ion-icon name="arrow-back"></ion-icon></button>
-                </ion-fab>
-             
-  
-          </ion-list>
-      
-          <ion-list *ngSwitchCase="'mini'">
-           
-              
-              <ion-card>
-                  <ion-card-header class="que">
-                    <ion-item>
-                        <ion-label text-wrap>How long does it take to wash the car?</ion-label>
-                    </ion-item>
-                  </ion-card-header>
-                  <ion-card-content>
->>>>>>> 90d0f4082c0d324a992e357ea1ad1f5660f39e10
                       <ion-item>
                           <ion-label text-wrap>how long does it take to wash the car?</ion-label>
                       </ion-item>
@@ -206,7 +120,6 @@
                       <ion-item>
                           <ion-label text-wrap>How much does it cost to wash the car?</ion-label>
                       </ion-item>
-<<<<<<< HEAD
                     </ion-card-header>
                     <ion-card-content>
                         <ion-item>
@@ -220,34 +133,6 @@
             <ion-list *ngSwitchCase="'van'">
                 <ion-card>
                     <ion-card-header class="que">
-=======
-                  </ion-card-header>
-                  <ion-card-content>
-                      <ion-item>
-                          <ion-input type="text" value="" placeholder="E.g R30" [(ngModel)]="miniCost"></ion-input>
-                      </ion-item>
-                  </ion-card-content>
-              </ion-card>
-                <ion-fab right bottom>
-                    <button ion-fab mini (click)="nextvan()"><ion-icon name="arrow-forward"></ion-icon></button>
-                </ion-fab>
-
-                <ion-fab left bottom>
-                    <button ion-fab mini (click)="nextsed()"><ion-icon name="arrow-back"></ion-icon></button>
-                </ion-fab>
-            
-            
-          </ion-list>
-          <ion-list *ngSwitchCase="'van'">
-            
-              <ion-card>
-                  <ion-card-header class="que">
-                    <ion-item>
-                        <ion-label text-wrap>How long does it take to wash the car?</ion-label>
-                    </ion-item>
-                  </ion-card-header>
-                  <ion-card-content>
->>>>>>> 90d0f4082c0d324a992e357ea1ad1f5660f39e10
                       <ion-item>
                           <ion-label text-wrap>how long does it take to wash the car?</ion-label>
                       </ion-item>
@@ -264,7 +149,6 @@
                       <ion-item>
                           <ion-label text-wrap>How much does it cost to wash the car?</ion-label>
                       </ion-item>
-<<<<<<< HEAD
                     </ion-card-header>
                     <ion-card-content>
                         <ion-item>
@@ -278,34 +162,6 @@
             <ion-list *ngSwitchCase="'truck'">
                 <ion-card>
                     <ion-card-header class="que">
-=======
-                  </ion-card-header>
-                  <ion-card-content>
-                      <ion-item>
-                          <ion-input type="text" value="" placeholder="E.g R30" [(ngModel)]="vanCost" ></ion-input>
-                      </ion-item>
-                  </ion-card-content>
-              </ion-card>
-
-            <ion-fab right bottom>
-                <button ion-fab mini (click)="nexttruck()"><ion-icon name="arrow-forward"></ion-icon></button>
-            </ion-fab>
-
-            <ion-fab left bottom>
-                <button ion-fab mini (click)="nextmin()"><ion-icon name="arrow-back"></ion-icon></button>
-            </ion-fab>
-         
-          </ion-list>
-          <ion-list  *ngSwitchCase="'truck'">
-             
-              <ion-card>
-                  <ion-card-header class="que">
-                    <ion-item>
-                        <ion-label text-wrap>How long does it take to wash the car?</ion-label>
-                    </ion-item>
-                  </ion-card-header>
-                  <ion-card-content>
->>>>>>> 90d0f4082c0d324a992e357ea1ad1f5660f39e10
                       <ion-item>
                           <ion-label text-wrap>how long does it take to wash the car?</ion-label>
                       </ion-item>
@@ -322,7 +178,6 @@
                       <ion-item>
                           <ion-label text-wrap>How much does it cost to wash the car?</ion-label>
                       </ion-item>
-<<<<<<< HEAD
                     </ion-card-header>
                     <ion-card-content>
                         <ion-item>
@@ -331,22 +186,6 @@
                     </ion-card-content>
                 </ion-card>
                 <button ion-button  round (click)="carsInformation()" >save</button>
-=======
-                  </ion-card-header>
-                  <ion-card-content>
-                      <ion-item>
-                          <ion-input type="text" value=""  placeholder="E.g R30" [(ngModel)]="truckCost"></ion-input>
-                      </ion-item>
-                  </ion-card-content>
-              </ion-card>
-          
-
-            <ion-fab left bottom>
-                <button ion-fab mini (click)="nextvan()"><ion-icon name="arrow-back"></ion-icon></button>
-            </ion-fab>
-         
-              <button ion-button  round (click)="carsInformation()" >save</button>
->>>>>>> 90d0f4082c0d324a992e357ea1ad1f5660f39e10
             </ion-list>
 
           </div>
