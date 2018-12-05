@@ -1,38 +1,62 @@
 page-signup {
-    form {
-        margin-bottom: 32px;
-        button {
-          margin-top: 20px;
-        }
-      }
-    
-      p {
-        font-size: 0.8em;
-        color: #d2d2d2;
-      }
-    
-      ion-label {
-        margin-left: 5px;
-      }
-    
-      ion-input {
-        padding: 5px;
-      }
-    
-      .invalid {
-        border-bottom: 1px solid #ff6153;
-      }
-    
-      .error-message {
-        min-height: 2.2rem;
-        p {
-          font-size: 60%;
-        }
-        ion-label {
-          margin: 2px 0;
-        }
-        .item-inner {
-          border-bottom: 0 !important;
-        }
-      }
+  h2{
+    color: #2f4cac;  
+}
+.content{
+
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color:#EEEEEE;
+}
+.scroll-content {
+    overflow: hidden !important;
+}
+.container{
+    display: flex;
+    justify-content:center;
+    align-content:left;
+    align-items:center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    flex-direction: column;
+    right: 0;
+    position: absolute;
+    .name-holder {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+
+
+}
+.form-holder {
+        width: 100%;
+        padding: 20px;
+    }
+.items {
+    background-color: transparent;
+    color:whitesmoke;
+    .input {
+ 
+        color:#4d606e;
+       
+    }
+    .label{
+        color:#2f4cac;
+    }
+ 
+  }
+#button {
+    color: #2f4cac;
+    color: white;
+    border-radius:50px;
+}
+#button1 {
+    border-radius:50px;
+}
+}
 }

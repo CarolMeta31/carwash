@@ -1,3 +1,4 @@
+import { LoginPage } from './../login/login';
 import { Component } from "@angular/core";
 import {
   Alert,
@@ -68,5 +69,8 @@ export class ResetpasswordPage {
         }
       );
     }
+  }
+  backToLogin(){
+    this.navCtrl.push(LoginPage);
   }
 }
