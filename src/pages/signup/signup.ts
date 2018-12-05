@@ -10,6 +10,7 @@ import {
 } from "ionic-angular";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { AuthProvider } from "../../providers/auth/auth";
+import { LoginPage } from '../login/login';
 
 
 @IonicPage()
@@ -37,7 +38,10 @@ export class SignupPage {
       password: [
         "",
         Validators.compose([Validators.minLength(6), Validators.required])
-      ]
+      ],
+      username:['',Validators.compose([Validators.required,
+        Validators.minLength(3),
+        Validators.pattern('[a-zA-Z]*')])],
     });
   }
 
@@ -72,5 +76,8 @@ export class SignupPage {
       this.loading = this.loadingCtrl.create();
       this.loading.present();
     }
+  }
+  gotosignin(){
+    this.navCtrl.push(LoginPage);
   }
 }
