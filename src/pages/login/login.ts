@@ -1,3 +1,4 @@
+import { WelcomePage } from './../welcome/welcome';
 import { ResetpasswordPage } from './../resetpassword/resetpassword';
 import { SignupPage } from './../signup/signup';
 import { HomePage } from './../home/home';
@@ -68,7 +69,7 @@ goToSignup():void {
       this.authProvider.loginUser(email, password).then(
         authData => {
           this.loading.dismiss().then(() => {
-            this.navCtrl.setRoot(HomePage);
+            this.navCtrl.setRoot(WelcomePage);
           });
         },
         error => {
