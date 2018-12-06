@@ -1,6 +1,6 @@
 
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>welcome</ion-title>
     <ion-buttons end>
       <button ion-button icon-only (click)="logOut()">
@@ -10,12 +10,28 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <button ion-button block color="primary" (click)="goToCreate()">
-    add new data
-  </button>
+<ion-content class="login-content">
 
-  <button ion-button block color="primary" (click)="goToList()">
-    See your captured data
-  </button>
+  <div class="container">
+
+      <ion-list>
+
+          <ion-card align="center" class="car" (click)="goToCreate()">
+            <ion-card-header>Add new data</ion-card-header>
+          </ion-card>
+      
+          <ion-card align="center" class="car" (click)="goToList()">
+              <ion-card-header>See captured data</ion-card-header>
+            </ion-card>
+        
+      
+        </ion-list>
+      
+       
+
+  </div>
+
+
+
+  
 </ion-content>

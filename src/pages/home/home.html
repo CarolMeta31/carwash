@@ -1,8 +1,6 @@
 <ion-header >
-  <ion-navbar >
-      <button ion-button menuToggle>
-          <ion-icon name="menu"></ion-icon>
-        </button>
+  <ion-navbar color="primary" >
+      
       <ion-title>
  Information Form
       </ion-title>
@@ -13,29 +11,33 @@
   
   <ion-content class="login-content">
 
-       
+       <div  class="container">
+
+          <ion-list>
+              <ion-card align="center" class="car" (click)="nextMainDetails()">
+                  <ion-card-header> Main Details</ion-card-header>
+                  
+                  <!-- <img src="./assets/imgs/cashwash.png"/> -->
+                    
+                </ion-card>
+              <ion-card align="center" class="car" (click)="nextOperationalDetails()">
+                  <ion-card-header>CarWash Operational Details</ion-card-header>
+                  
+                  <!-- <img src="./assets/imgs/cashwash.png"/> -->
+                    
+                </ion-card>
+            
+  
+              <ion-card align="center" class="ent" (click)="nextCarDetails()">
+                <ion-card-header>Car details</ion-card-header>
+  
+              </ion-card>
+          </ion-list>
+
+       </div>
 
      
-        <ion-list>
-            <ion-card align="center" class="car" (click)="nextMainDetails()">
-                <ion-card-header> Main Details</ion-card-header>
-                
-                <!-- <img src="./assets/imgs/cashwash.png"/> -->
-                  
-              </ion-card>
-            <ion-card align="center" class="car" (click)="nextOperationalDetails()">
-                <ion-card-header>CarWash Operational Details</ion-card-header>
-                
-                <!-- <img src="./assets/imgs/cashwash.png"/> -->
-                  
-              </ion-card>
-          
-
-            <ion-card align="center" class="ent" (click)="nextCarDetails()">
-              <ion-card-header>Car details</ion-card-header>
-
-            </ion-card>
-        </ion-list>
+      
 
        
     

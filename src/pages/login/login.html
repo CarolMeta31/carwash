@@ -1,3 +1,4 @@
+
 <ion-content no-padding class="content">
   <div class="container">
     <div class="name-holder">
@@ -5,7 +6,8 @@
         
       </div>
       <div class="app-name">
-          <h2>Carwash</h2>
+        Data Watch
+          
       </div>
     </div>
   
@@ -33,11 +35,11 @@
   && loginForm.controls.password.touched">
     <p  ion-text color="danger">Your password needs more than 6 characters.</p>
   </ion-item>
-<div padding>
-  <button ion-button block type="submit" [disabled]="!loginForm.valid">
-    Log In
+
+  <button ion-button block color="twitter" type="submit" [disabled]="!loginForm.valid">
+    LogIn
   </button>
-</div>
+
 
 
 <!-- <button ion-button block clear (click)="goToResetPassword()">
@@ -45,7 +47,7 @@
 </button> -->
 <div  style="text-align:center" padding>
   <p style="color:#4d606e">Forgot Password🙁?<a style="color:#2f4cac" (click)="goToResetPassword()">Reset</a></p>
-  <p style="color:#4d606e" class="p">have an account?<a style="color:#2f4cac"(click)="goToSignup()">Create new account</a></p>
+  <p style="color:#4d606e" class="p">Don't have an account?<a style="color:#2f4cac"(click)="goToSignup()">Create new account</a></p>
   <br>
 
 </div>
