@@ -20,18 +20,10 @@ import { HomePage } from '../pages/home/home';
 import { AuthProvider } from '../providers/auth/auth';
 import { CarwashProvider } from '../providers/carwash/carwash';
 import { EntertainmentProvider } from '../providers/entertainment/entertainment';
-import * as firebase from 'firebase';
+
 import { MainDetailsProvider } from '../providers/main-details/main-details';
 import { OperationalDetailsProvider } from '../providers/operational-details/operational-details';
-var config = {
-  apiKey: "AIzaSyAjNdP0-YIlfcWvchezd7_NIGCb7lygvsY",
-  authDomain: "carwashapp-4fa12.firebaseapp.com",
-  databaseURL: "https://carwashapp-4fa12.firebaseio.com",
-  projectId: "carwashapp-4fa12",
-  storageBucket: "carwashapp-4fa12.appspot.com",
-  messagingSenderId: "766383790377"
-};
-firebase.initializeApp(config);
+
 @NgModule({
   declarations: [
     MyApp,

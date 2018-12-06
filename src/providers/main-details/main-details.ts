@@ -50,5 +50,6 @@ createCarwashMainDetails(
   getEventDetail(carwashId:string): firebase.database.Reference {
     return this.carWashListRef.child(carwashId);
   }
+  
 
 }
