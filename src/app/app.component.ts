@@ -6,9 +6,17 @@ import { Component} from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
+import * as firebase from 'firebase';
 import { AuthProvider } from './../providers/auth/auth';
 
+var config = {
+  apiKey: "AIzaSyAjNdP0-YIlfcWvchezd7_NIGCb7lygvsY",
+  authDomain: "carwashapp-4fa12.firebaseapp.com",
+  databaseURL: "https://carwashapp-4fa12.firebaseio.com",
+  projectId: "carwashapp-4fa12",
+  storageBucket: "carwashapp-4fa12.appspot.com",
+  messagingSenderId: "766383790377"
+};
 
 
 
@@ -17,7 +25,7 @@ import { AuthProvider } from './../providers/auth/auth';
 })
 export class MyApp {
   
-  rootPage:any = LoginPage;
+  rootPage:any;
 
 
   
@@ -30,8 +38,17 @@ export class MyApp {
       statusBar.styleDefault();
       splashScreen.hide();
     });
- 
+    firebase.initializeApp(config);
 
-
+    const unsubscribe = firebase.auth().onAuthStateChanged(user => {
+      if (!user) {
+        this.rootPage =LoginPage;
+        unsubscribe();
+      } else {
+        this.rootPage =HomePage;
+        unsubscribe();
+      }
+    });
+  
 }
 }

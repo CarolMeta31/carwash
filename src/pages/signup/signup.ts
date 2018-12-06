@@ -31,6 +31,11 @@ export class SignupPage {
     formBuilder: FormBuilder
   ) {
     this.signupForm = formBuilder.group({
+
+      username:['',Validators.compose([Validators.required,
+        Validators.minLength(3),
+        Validators.pattern('[a-zA-Z]*')])],
+
       email: [
         "",
         Validators.compose([Validators.required])
@@ -39,9 +44,7 @@ export class SignupPage {
         "",
         Validators.compose([Validators.minLength(6), Validators.required])
       ],
-      username:['',Validators.compose([Validators.required,
-        Validators.minLength(3),
-        Validators.pattern('[a-zA-Z]*')])],
+  
     });
   }
 
@@ -54,6 +57,7 @@ export class SignupPage {
         `Need to complete the form, current value: ${this.signupForm.value}`
       );
     } else {
+      
       const email: string = this.signupForm.value.email;
       const password: string = this.signupForm.value.password;
   
