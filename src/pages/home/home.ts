@@ -1,3 +1,5 @@
+import { LoginPage } from './../login/login';
+import { AuthProvider } from './../../providers/auth/auth';
 import { MainDetailsPage } from './../main-details/main-details';
 import { CarPage } from './../car/car';
 import { CarwashProvider } from './../../providers/carwash/carwash';
@@ -20,7 +22,8 @@ export class HomePage {
   
 
 
-  constructor(public navCtrl: NavController,private carwashPro:CarwashProvider) {
+  constructor(public navCtrl: NavController,private authPro:AuthProvider,
+    private carwashPro:CarwashProvider) {
 
   }
 
@@ -39,7 +42,11 @@ export class HomePage {
      }
 
 
-
+     logOut(): void {
+      this.authPro.logoutUser().then(() => {
+        this.navCtrl.setRoot(LoginPage);
+      });
+    }
  
     
 }
