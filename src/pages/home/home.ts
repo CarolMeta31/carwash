@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-import { LoginPage } from './../login/login';
-import { AuthProvider } from './../../providers/auth/auth';
-=======
 import { OperationalDetailsProvider } from './../../providers/operational-details/operational-details';
 import { MainDetailsProvider } from './../../providers/main-details/main-details';
->>>>>>> 84e810c50d5c7e8275fcdfa3125e86983607bd38
 import { MainDetailsPage } from './../main-details/main-details';
 import { CarPage } from './../car/car';
 import { CarwashProvider } from './../../providers/carwash/carwash';
@@ -55,13 +50,8 @@ export class HomePage {
   
 
 
-<<<<<<< HEAD
-  constructor(public navCtrl: NavController,private authPro:AuthProvider,
-    private carwashPro:CarwashProvider) {
-=======
   constructor(public navCtrl: NavController,private carsPro:CarwashProvider,
     private carwashPro:CarwashProvider ,private operationsPro:OperationalDetailsProvider,private mainPro:MainDetailsProvider) {
->>>>>>> 84e810c50d5c7e8275fcdfa3125e86983607bd38
 
   }
   //slide 1 main details
@@ -134,14 +124,6 @@ export class HomePage {
     this.navCtrl.push(CarPage);
      }
 
-<<<<<<< HEAD
-
-     logOut(): void {
-      this.authPro.logoutUser().then(() => {
-        this.navCtrl.setRoot(LoginPage);
-      });
-    }
-=======
      createCarsDetail(
       suvDuration:number,
       sedanDuration:number,
@@ -192,7 +174,6 @@ export class HomePage {
       this.car='truck'
     }
 
->>>>>>> 84e810c50d5c7e8275fcdfa3125e86983607bd38
  
     
 }
