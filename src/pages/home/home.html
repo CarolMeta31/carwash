@@ -180,7 +180,7 @@
                 <ion-item>
                 <ion-label text-wrap>What type of entertianment area are you situated next to?</ion-label>
             </ion-item>`
-            <form [formGroup]="userForm" class="form-holder" novalidate> 
+            <form [formGroup]="userForm" class="form-holder"(submit)="submitForm($event)"novalidate> 
         
             <ion-item>
                 <ion-input  type="text" formControlName="entertainmentArea" placeholder="E.g pub/park" [(ngModel)]="entertainmentArea" class="outline"></ion-input>

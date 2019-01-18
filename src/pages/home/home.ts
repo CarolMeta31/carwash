@@ -9,7 +9,7 @@ import { CarwashProvider } from './../../providers/carwash/carwash';
 import { EntertainmentPage } from './../entertainment/entertainment';
 import { CarDetailsPage } from './../car-details/car-details';
 import { Component } from '@angular/core';
-import { NavController,AlertController } from 'ionic-angular';
+import { NavController,AlertController, DateTime } from 'ionic-angular';
 import { Time } from '@angular/common';
 import {FormControl} from '@angular/forms';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
@@ -22,7 +22,10 @@ export class HomePage {
   Cards:string='';
   carwashName:string='';
   location:string='';
-  
+  openHours:DateTime;
+  entertainmentArea:string;
+
+
   userForm:FormGroup;
 
   
@@ -76,7 +79,7 @@ event.preventDefault();
     maleEmployees:number,
   femaleEmployees:number
   ): void {
-    if (this.carwashName === "" || this.location === "") {
+    if (this.carwashName === "" || this.location === "" || this.entertainmentArea==="") {
       const alert = this.alertCtrl.create({
         title: "Warning",
         subTitle: "please fill in all fields",
