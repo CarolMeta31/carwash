@@ -30,7 +30,7 @@
 
             <ion-item>
                 <ion-label floating text-wrap>What is the name of the Car Wash?</ion-label>
-                <ion-input type="text" formControlName="carwashName" placeholder="CarWashName" class="outline" [(ngModel)]="carwashName"></ion-input>
+                <ion-input type="text" formControlName="carwashName"  class="outline" [(ngModel)]="carwashName"></ion-input>
             </ion-item>
                                               
             <ion-item no-lines *ngIf="userForm.get('carwashName').hasError('pattern') && userForm.get('carwashName').touched" class="invalid">
@@ -41,7 +41,7 @@
                     </ion-item>
             <ion-item>
                 <ion-label floating text-wrap>What is the location of the Car Wash?</ion-label>
-                <ion-input type="text" formControlName="location" placeholder="Location" class="outline" [(ngModel)]="location"></ion-input>
+                <ion-input type="text" formControlName="location" class="outline" [(ngModel)]="location"></ion-input>
             </ion-item>
 
             <ion-item  no-lines *ngIf="userForm.get('location').hasError('required') && userForm.get('location').touched" class="invalid">
@@ -240,7 +240,15 @@
         
 
             <button ion-button block  color="twittwer"
-            (click)="saveCarOperationsDetails(
+            (click)="createMainDetails(carwashName,
+            location,
+            openHours,
+            closinghours,
+            satrdayHrsOpen,
+            satrdayHrsclose,
+            sundayHrsOpen,
+            sundayHrsClose,
+
             entertainmentAvail,
             entertainmentArea,
             numberOfCarsSedan,
@@ -249,302 +257,11 @@
             numberOfCarsMini,
             numberOfCarsTruck,
             maleEmployees,
-            femaleEmployees,
-            createMainDetails,carwashName,
-            location,
-            openHours,
-            closinghours,
-            satrdayHrsOpen,
-            satrdayHrsclose,
-            sundayHrsOpen,
-            sundayHrsClose)"[disabled]="!form.valid">save</button>
+            femaleEmployees)"[disabled]="!form.valid">add carwash info
+        </button>
 
          
 </ion-slide>
-<!-- 
-<ion-slide>
-   
-    <ion-card align="center" class="ent" >
-    <ion-card-header>Car details</ion-card-header>
-
-    </ion-card>
-
-    <ion-header>
-            
-              <ion-toolbar class="login-content">
-                  <ion-segment class="login-content" [(ngModel)]="car">
-                    <ion-segment-button id="par" value="suv">
-                      SUV
-                    </ion-segment-button>
-                    <ion-segment-button id="par" value="sedan">
-                      Sedan
-                    </ion-segment-button>
-                    <ion-segment-button id="par" value="mini">
-                      Mini-Bus
-                    </ion-segment-button>
-            
-                    <ion-segment-button id="par" value="van">
-                      Van
-                    </ion-segment-button>
-                    <ion-segment-button id="par" value="truck">
-                      Truck
-                    </ion-segment-button>
-            
-            
-                  </ion-segment>
-                </ion-toolbar>
-              
-            </ion-header>
-            
-            
-      
-
-        <div [ngSwitch]="car">
-        <ion-list *ngSwitchCase="'suv'">
-   
-        <ion-card>
-        
-            <ion-card-header class="que">
-            <ion-item>
-                <ion-label text-wrap>how long does it take to wash the car?</ion-label>
-            </ion-item>
-            </ion-card-header>
-            
-            <ion-card-content>
-        <form [formGroup]="userForm" class="form-holder" novalidate>       
-                <ion-item>
-                    <ion-input type="text" value="" formControlName="suvDuration" placeholder="E.g 30min" class="outline"></ion-input>
-                </ion-item>
-                <ion-item no-lines *ngIf="userForm.get('suvDuration').hasError('pattern') && userForm.get('suvDuration').touched" class="invalid">
-                        <p ion-text color="danger"> Duration field can only take numbers!</p>
-                </ion-item>
-                <ion-item  no-lines *ngIf="userForm.get('suvDuration').hasError('required') && userForm.get('suvDuration').touched" class="invalid">
-                        <p ion-text color="danger">Duration field is required!</p>
-                        </ion-item>
-              
-                    </form> 
-            </ion-card-content>
-            
-        </ion-card>
-
-        <ion-card>
-            <ion-card-header class="que">
-            <ion-item>
-                <ion-label text-wrap>how much does it cost to wash the car?</ion-label>
-            </ion-item>
-            </ion-card-header>
-            <ion-card-content>
-    <form [formGroup]="userForm" class="form-holder" novalidate>   
-                <ion-item>
-                    <ion-input type="text" value="" formControlName="suvCost"placeholder="E.g R30" [(ngModel)]="suvCost" class="outline"></ion-input>
-                </ion-item>
-
-                <ion-item  no-lines *ngIf="userForm.get('suvCost').hasError('required') && userForm.get('suvCost').touched" class="invalid">
-                        <p ion-text color="danger">Cost field is required!</p>
-                        </ion-item>  
-                        <ion-item no-lines *ngIf="userForm.get('suvCost').hasError('pattern') && userForm.get('suvCost').touched" class="invalid">
-                                <p ion-text color="danger"> Cost field can only take numbers!</p>
-                        </ion-item>                  
-          </form>      
-            </ion-card-content>
-           
-        </ion-card>
-
-            <ion-fab right bottom>
-                    <button ion-fab mini (click)="nextsed()"><ion-icon name="arrow-forward"></ion-icon></button>
-            </ion-fab>
-
-                       
-    
-</ion-list>
-
-    <ion-list *ngSwitchCase="'sedan'">
-
-        <ion-card>
-            <ion-card-header class="que">
-                <ion-item>
-                    <ion-label text-wrap>how long does it take to wash the car?</ion-label>
-                </ion-item>
-            </ion-card-header>
-            <ion-card-content>
-                    <form [formGroup]="userForm" class="form-holder" novalidate>   
-                <ion-item>
-                    <ion-input type="text" placeholder="E.g 30min" formControlName="sedanDuration" [(ngModel)]="sedanDuration" class="outline"></ion-input>
-                </ion-item>
-                 
-       
-                <ion-item  no-lines *ngIf="userForm.get('sedanDuration').hasError('required') && userForm.get('sedanDuration').touched" class="invalid">
-                        <p ion-text color="danger">Ducation field is required!</p>
-                        </ion-item>  
-                        <ion-item no-lines *ngIf="userForm.get('sedanDuration').hasError('pattern') && userForm.get('sedanDuration').touched" class="invalid">
-                                <p ion-text color="danger"> Duration field can only take numbers!</p>
-                        </ion-item>     
-                </form>
-            </ion-card-content>
-        </ion-card>
-
-        <ion-card>
-            <ion-card-header class="que">
-                <ion-item>
-                    <ion-label text-wrap>how much does it cost to wash the car?</ion-label>
-                </ion-item>
-            </ion-card-header>
-            <ion-card-content>
-                
-                <ion-item>
-                    <ion-input type="text" value="" placeholder="E.g R30" [(ngModel)]="sedanCost"></ion-input>
-                </ion-item>
-            </ion-card-content>
-        </ion-card>
-        
-        <ion-fab right bottom>
-                <button ion-fab mini (click)="nextmin()"><ion-icon name="arrow-forward"></ion-icon></button>
-        </ion-fab>
-
-        <ion-fab left bottom>
-                <button ion-fab mini (click)="nextsuv()"><ion-icon name="arrow-back"></ion-icon></button>
-        </ion-fab>
-
-                     
-
-        </ion-list>
-    
-        <ion-list *ngSwitchCase="'mini'">
-            
-            
-            <ion-card>
-                <ion-card-header class="que">
-                    <ion-item>
-                        <ion-label text-wrap>how long does it take to wash the car?</ion-label>
-                    </ion-item>
-                </ion-card-header>
-                <ion-card-content>
-                    <ion-item>
-                        <ion-input type="text" value=""  placeholder="E.g 30min" [(ngModel)]="miniDuration"></ion-input>
-                    </ion-item>
-                </ion-card-content>
-            </ion-card>
-
-            <ion-card>
-                <ion-card-header class="que">
-                    <ion-item>
-                        <ion-label text-wrap>how much does it cost to wash the car?</ion-label>
-                    </ion-item>
-                </ion-card-header>
-                <ion-card-content>
-                    <ion-item>
-                        <ion-input type="text" value="" placeholder="E.g R30" [(ngModel)]="miniCost"></ion-input>
-                    </ion-item>
-                </ion-card-content>
-            </ion-card>
-
-            <ion-fab right bottom>
-                    <button ion-fab mini (click)="nextvan()"><ion-icon name="arrow-forward"></ion-icon></button>
-                </ion-fab>
-
-            <ion-fab left bottom>
-                    <button ion-fab mini (click)="nextsed()"><ion-icon name="arrow-back"></ion-icon></button>
-            </ion-fab>
-                   
-                          
-                      
-</ion-list>
-
-<ion-list *ngSwitchCase="'van'">
-                    
-        <ion-card>
-            <ion-card-header class="que">
-                <ion-item>
-                    <ion-label text-wrap>how long does it take to wash the car?</ion-label>
-                </ion-item>
-            </ion-card-header>
-            <ion-card-content>
-                <ion-item>
-                    <ion-input type="text" value=""  placeholder="E.g 30min" [(ngModel)]="vanDuration"></ion-input>
-                </ion-item>
-            </ion-card-content>
-        </ion-card>
-
-        <ion-card>
-            <ion-card-header class="que">
-                <ion-item>
-                    <ion-label text-wrap>how much does it cost to wash the car?</ion-label>
-                </ion-item>
-            </ion-card-header>
-            <ion-card-content>
-                <ion-item>
-                    <ion-input type="text" value="" placeholder="E.g R30" [(ngModel)]="vanCost" ></ion-input>
-                </ion-item>
-            </ion-card-content>
-        </ion-card>
-        
-
-        <ion-fab right bottom>
-                <button ion-fab mini (click)="nexttruck()"><ion-icon name="arrow-forward"></ion-icon></button>
-        </ion-fab>
-
-        <ion-fab left bottom>
-                <button ion-fab mini (click)="nextmin()"><ion-icon name="arrow-back"></ion-icon></button>
-        </ion-fab>
-
-                
-        
-            
-
-</ion-list>
-
-<ion-list  *ngSwitchCase="'truck'">
-            
-        <ion-card>
-            <ion-card-header class="que">
-                <ion-item>
-                    <ion-label text-wrap>how long does it take to wash the car?</ion-label>
-                </ion-item>
-            </ion-card-header>
-            <ion-card-content>
-                <ion-item>
-                    <ion-input type="text" value=""  placeholder="E.g 30min" [(ngModel)]="truckDuration"></ion-input>
-                </ion-item>
-            </ion-card-content>
-        </ion-card>
-
-        <ion-card>
-            <ion-card-header class="que">
-                <ion-item>
-                    <ion-label text-wrap>how much does it cost to wash the car?</ion-label>
-                </ion-item>
-            </ion-card-header>
-            <ion-card-content>
-                <ion-item>
-                    <ion-input type="text" value=""  placeholder="E.g R30" [(ngModel)]="truckCost"></ion-input>
-                </ion-item>
-            </ion-card-content>
-        </ion-card>
-            <button ion-button block (click)="createCarsDetail(
-                suvDuration,
-                sedanDuration,
-                miniDuration,
-                vanDuration,
-                truckDuration,
-                suvCost,
-                sedanCost,
-                miniCost,
-                vanCost,
-                truckCost)" ></button>
-
-
-        <ion-fab left bottom>
-                <button ion-fab mini (click)="nextvan()"><ion-icon name="arrow-back"></ion-icon></button>
-        </ion-fab>
-        
-          
-</ion-list>
-            
-            
-            
-</div>
-                
-</ion-slide> -->
 
 </ion-slides>
     
