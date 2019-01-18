@@ -4,42 +4,266 @@
       <ion-title>
  Information Form
       </ion-title>
-        
+      <ion-buttons end>
+        <button ion-button icon-only (click)="logOut()">
+          <ion-icon name="log-out"></ion-icon>
+        </button>
+      </ion-buttons>
   
   </ion-navbar>
   </ion-header>
   
   <ion-content class="login-content">
 
-       <div  class="container">
-
-          <ion-list>
-              <ion-card align="center" class="car" (click)="nextMainDetails()">
-                  <ion-card-header> Main Details</ion-card-header>
-                  
-                  <!-- <img src="./assets/imgs/cashwash.png"/> -->
-                    
-                </ion-card>
-              <ion-card align="center" class="car" (click)="nextOperationalDetails()">
-                  <ion-card-header>CarWash Operational Details</ion-card-header>
-                  
-                  <!-- <img src="./assets/imgs/cashwash.png"/> -->
-                    
-                </ion-card>
-            
-  
-              <ion-card align="center" class="ent" (click)="nextCarDetails()">
-                <ion-card-header>Car details</ion-card-header>
-  
-              </ion-card>
-          </ion-list>
-
-       </div>
-
+ 
      
-      
+   
 
-       
+<ion-slides pager>
+                        
+<ion-slide >   
+    <ion-card align="center" class="car">
+        <ion-card-header> Main Details</ion-card-header>
+        </ion-card>
+<form [formGroup]="userForm" class="form-holder" (ngSubmit)="next1()"  novalidate>   
+        
+
+            <ion-item>
+                <ion-label floating text-wrap>What is the name of the Car Wash?</ion-label>
+                <ion-input type="text" formControlName="carwashName"  class="outline" [(ngModel)]="carwashName"></ion-input>
+            </ion-item>
+                                              
+            <ion-item no-lines *ngIf="userForm.get('carwashName').hasError('pattern') && userForm.get('carwashName').touched" class="invalid">
+                    <p ion-text color="danger"> CarWashName can only take letters!</p>
+                    </ion-item>
+                    <ion-item  no-lines *ngIf="userForm.get('carwashName').hasError('required') && userForm.get('carwashName').touched" class="invalid">
+                            <p ion-text color="danger">CarWashName  field is required!</p>
+                    </ion-item>
+            <ion-item>
+                <ion-label floating text-wrap>What is the location of the Car Wash?</ion-label>
+                <ion-input type="text" formControlName="location" class="outline" [(ngModel)]="location"></ion-input>
+            </ion-item>
+
+            <ion-item  no-lines *ngIf="userForm.get('location').hasError('required') && userForm.get('location').touched" class="invalid">
+            <p ion-text color="danger">Location field is required!</p>
+            </ion-item>
+            <ion-item no-lines *ngIf="userForm.get('location').hasError('pattern') && userForm.get('location').touched" class="invalid">
+            <p ion-text color="danger"> Location can only take letters!</p>
+            </ion-item>
+        </form>  
+           
+           
+
+             
+<form [formGroup]="form" (submit)="submitForm($event)">    
+          
+                    
+            <ion-item>
+                <ion-label text-wrap >What are your operational hours of the Car Wash?</ion-label>
+            </ion-item>
+        
+            <ion-item>
+                <ion-label text-wrap >Open</ion-label>
+                    <ion-select  formControlName="option" name="d" class="myselect" [(ngModel)]="openHours">
     
-      </ion-content>
+                        <ion-option value="8:00">8:00</ion-option>
+                        <ion-option value="9:00">9:00</ion-option>
+                        <ion-option value="10:00">10:00</ion-option>
+                        <ion-option value="11:00">11:00</ion-option>
+                    </ion-select>
+                
+            </ion-item>
+
+            <ion-item>
+
+                <ion-label text-wrap >Close</ion-label>
+                    <ion-select formControlName="option" [(ngModel)]="closinghours">
+                        
+                        <ion-option  value="18:00">18:00</ion-option>
+                        <ion-option  value="19:00">19:00</ion-option>
+                        <ion-option  value="20:00">20:00</ion-option>
+                        <ion-option  value="21:00">21:00</ion-option>
+                    </ion-select>
+
+            </ion-item>
+
+
+                <ion-item>
+                <ion-label text-wrap>What are your operational hours on weekends?</ion-label>
+                </ion-item>
+        
+                <ion-item >
+                <ion-label text-wrap>Saturday Hours:</ion-label>
+                </ion-item>
+                <ion-item>
+                <ion-label text-wrap >Open</ion-label>
+                    <ion-select  formControlName="option" name="d" class="myselect" [(ngModel)]="satrdayHrsOpen">
+    
+                        <ion-option value="8:00">8:00</ion-option>
+                        <ion-option value="9:00">9:00</ion-option>
+                        <ion-option value="10:00">10:00</ion-option>
+                        <ion-option value="11:00">11:00</ion-option>
+                    </ion-select>
+                
+                </ion-item>
+                <ion-item>
+    
+                    <ion-label text-wrap >Close</ion-label>
+                    <ion-select  formControlName="option" [(ngModel)]="satrdayHrsclose">
+                            
+                        <ion-option  value="18:00">18:00</ion-option>
+                        <ion-option  value="19:00">19:00</ion-option>
+                        <ion-option  value="20:00">20:00</ion-option>
+                        <ion-option  value="21:00">21:00</ion-option>
+                        
+                    </ion-select>
+    
+                </ion-item>
+                <ion-item>
+                <ion-label text-wrap>Sunday Hours:</ion-label>
+                </ion-item>
+                <ion-item>
+                    <ion-label text-wrap >Open</ion-label>
+                    <ion-select  formControlName="option" name="d" class="myselect" [(ngModel)]="sundayHrsOpen">
+    
+                        <ion-option value="8:00">8:00</ion-option>
+                        <ion-option value="9:00">9:00</ion-option>
+                        <ion-option value="10:00">10:00</ion-option>
+                        <ion-option value="11:00">11:00</ion-option>
+                    </ion-select>
+                    
+                </ion-item>
+                <ion-item>
+    
+                    <ion-label text-wrap >Close</ion-label>
+                        <ion-select formControlName="option" [(ngModel)]="sundayHrsClose">
+                            
+                            <ion-option  value="18:00">18:00</ion-option>
+                            <ion-option  value="19:00">19:00</ion-option>
+                            <ion-option  value="20:00">20:00</ion-option>
+                            <ion-option  value="21:00">21:00</ion-option>
+                            
+                        </ion-select>
+    
+                </ion-item>
+            
+                
+                        
+               
+        </form>
+</ion-slide>
+
+<ion-slide>
+                
+        
+                        
+ 
+       
+         
+          <ion-card align="center" class="car">
+                        
+            <ion-card-header>CarWash Operational Details</ion-card-header>              
+          </ion-card>
+                                                                          
+            <ion-item>
+                <ion-label text-wrap>Is the car wash situated near an entertainment place?</ion-label>
+            </ion-item>
+         
+                <ion-item>
+                <ion-label text-wrap>Select:</ion-label>
+                    <ion-select  name="d" class="myselect" [(ngModel)]="entertainmentAvail">
+                    <ion-option value="yes">Yes</ion-option>
+                    <ion-option value="no">No</ion-option>
+                    </ion-select>
+                </ion-item>
+      
+                <ion-item>
+                <ion-label text-wrap>What type of entertianment area are you situated next to?</ion-label>
+            </ion-item>`
+            <form [formGroup]="userForm" class="form-holder" novalidate> 
+        
+            <ion-item>
+                <ion-input  type="text" formControlName="entertainmentArea" placeholder="E.g pub/park" [(ngModel)]="entertainmentArea" class="outline"></ion-input>
+            </ion-item>
+            <ion-item no-lines *ngIf="userForm.get('entertainmentArea').hasError('pattern') && userForm.get('entertainmentArea').touched" class="invalid">
+                    <p ion-text color="danger"> pub/park can only take letters!</p>
+            </ion-item>
+            <ion-item  no-lines *ngIf="userForm.get('entertainmentArea').hasError('required') && userForm.get('entertainmentArea').touched" class="invalid">
+                    <p ion-text color="danger">pub/park field is required!</p>
+                    </ion-item>
+            <ion-item no-lines>
+            <ion-label text-wrap >How many cars do you wash a day?</ion-label>
+        </ion-item>
+    </form>
+        <ion-list no-lines>
+            <ion-item>
+            <ion-label>Sedan</ion-label>
+            <ion-input type="number" [(ngModel)]="numberOfCarsSedan"></ion-input>
+            </ion-item>
+            
+            <ion-item>
+                <ion-label>Suv</ion-label>
+                <ion-input type="number" [(ngModel)]=" numberOfCarsSuv"></ion-input>
+            </ion-item>
+            
+            <ion-item>
+                <ion-label>Van</ion-label>
+                <ion-input type="number" [(ngModel)]="numberOfCarsVan"></ion-input>
+            </ion-item>
+        
+            <ion-item>
+                <ion-label>Mini-bus</ion-label>
+                <ion-input type="number" [(ngModel)]="numberOfCarsMini"></ion-input>
+            </ion-item>
+            
+            <ion-item>
+                <ion-label>Truck/van</ion-label>
+                <ion-input type="number" [(ngModel)]="numberOfCarsTruck"></ion-input>
+            </ion-item>
+        </ion-list>
+    
+        <ion-item no-lines>
+            <ion-label text-wrap>Number of employees you have</ion-label>
+        </ion-item>
+    
+        <ion-list>
+            <ion-item>
+                <ion-label>Males</ion-label>
+                <ion-input type="number" [(ngModel)]="maleEmployees"></ion-input>
+            </ion-item>
+            
+            <ion-item>
+                <ion-label>Female</ion-label>
+                <ion-input type="number" [(ngModel)]="femaleEmployees" ></ion-input>
+            </ion-item>
+        </ion-list>
+        
+
+            <button ion-button block  color="twittwer"
+            (click)="createMainDetails(carwashName,
+            location,
+            openHours,
+            closinghours,
+            satrdayHrsOpen,
+            satrdayHrsclose,
+            sundayHrsOpen,
+            sundayHrsClose,
+
+            entertainmentAvail,
+            entertainmentArea,
+            numberOfCarsSedan,
+            numberOfCarsSuv,
+            numberOfCarsVan,
+            numberOfCarsMini,
+            numberOfCarsTruck,
+            maleEmployees,
+            femaleEmployees)"[disabled]="!form.valid">add carwash info
+        </button>
+
+         
+</ion-slide>
+
+</ion-slides>
+    
+</ion-content>
        

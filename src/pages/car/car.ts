@@ -35,53 +35,53 @@ export class CarPage {
     console.log('ionViewDidLoad CarPage');
   }
 
-  createCarsDetail(
-    suvDuration:number,
-    sedanDuration:number,
-    miniDuration:number,
-    vanDuration:number,
-    truckDuration:number,
+//   createCarsDetail(
+//     suvDuration:number,
+//     sedanDuration:number,
+//     miniDuration:number,
+//     vanDuration:number,
+//     truckDuration:number,
 
-    suvCost:string,
-    sedanCost:string,
-     miniCost:string,
-     vanCost:string,
-     truckCost:string,
+//     suvCost:string,
+//     sedanCost:string,
+//      miniCost:string,
+//      vanCost:string,
+//      truckCost:string,
     
-): void {
-  this.carsPro
-    .createCarsDetails(suvDuration,
-      sedanDuration,
-      miniDuration,
-      vanDuration,
-      truckDuration,
+// ): void {
+//   this.carsPro
+//     .createCarsDetails(suvDuration,
+//       sedanDuration,
+//       miniDuration,
+//       vanDuration,
+//       truckDuration,
   
-      suvCost,
-      sedanCost,
-       miniCost,
-       vanCost,
-       truckCost,)
-    .then(newEvent => {
-      this.navCtrl.pop();
-    });
-  }
+//       suvCost,
+//       sedanCost,
+//        miniCost,
+//        vanCost,
+//        truckCost,)
+//     .then(newEvent => {
+//       this.navCtrl.pop();
+//     });
+//   }
 
-  nextsed(){
-    this.car='sedan';
-  }
+//   nextsed(){
+//     this.car='sedan';
+//   }
 
-  nextmin(){
-    this.car='mini';
-  }
+//   nextmin(){
+//     this.car='mini';
+//   }
 
-  nextsuv(){
-    this.car='suv'
-  }
+//   nextsuv(){
+//     this.car='suv'
+//   }
 
-  nextvan(){
-    this.car='van'
-  }
-  nexttruck(){
-    this.car='truck'
-  }
+//   nextvan(){
+//     this.car='van'
+//   }
+//   nexttruck(){
+//     this.car='truck'
+//   }
 }
