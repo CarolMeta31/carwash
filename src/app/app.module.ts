@@ -23,7 +23,7 @@ import { EntertainmentProvider } from '../providers/entertainment/entertainment'
 
 import { MainDetailsProvider } from '../providers/main-details/main-details';
 import { OperationalDetailsProvider } from '../providers/operational-details/operational-details';
-import { MarkerProvider } from '../providers/marker/marker';
+
 
 @NgModule({
   declarations: [
@@ -69,8 +69,8 @@ import { MarkerProvider } from '../providers/marker/marker';
     CarwashProvider,
     EntertainmentProvider,
     MainDetailsProvider,
-    OperationalDetailsProvider,
-    MarkerProvider
+    OperationalDetailsProvider
+
   ]
 })
 export class AppModule {}

@@ -37,8 +37,9 @@ export class ListDataPage {
   }
 
   ionViewDidLoad() {
-        
+      
   }
+
 
 
 }
