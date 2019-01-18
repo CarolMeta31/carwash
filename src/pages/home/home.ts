@@ -6,25 +6,27 @@ import { CarwashProvider } from './../../providers/carwash/carwash';
 import { EntertainmentPage } from './../entertainment/entertainment';
 import { CarDetailsPage } from './../car-details/car-details';
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController,AlertController } from 'ionic-angular';
 import { Time } from '@angular/common';
 import {FormControl} from '@angular/forms';
-
+import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 @Component({
     selector: 'page-home',
     templateUrl: 'home.html'
 })
 export class HomePage {
-
+  form: FormGroup;
   Cards:string='';
- 
-
+  carwashName:string='';
+  location:string='';
+  
+  userForm:FormGroup;
 
   //carwash details declaration
   testRadioOpen: boolean;
   testRadioResult;
   entertainmentAvailable:boolean;
-  entertainmentArea:string;
+  entertainmentArea:string='';
    numberOfCarsSedan:number;
   numberOfCarsSuv:number;
   numberOfCarsVan:number;
@@ -51,9 +53,29 @@ export class HomePage {
 
 
   constructor(public navCtrl: NavController,private carsPro:CarwashProvider,
-    private carwashPro:CarwashProvider ,private operationsPro:OperationalDetailsProvider,private mainPro:MainDetailsProvider) {
+    private carwashPro:CarwashProvider ,private operationsPro:OperationalDetailsProvider,public formBuilder: FormBuilder,private mainPro:MainDetailsProvider,public alertCtrl:AlertController) {
+      this.userForm= this.formBuilder.group({
+    
+        location:['',Validators.compose([Validators.required,,Validators.pattern('[a-zA-Z ]*')])],
+        carwashName:['',Validators.compose([Validators.required,,Validators.pattern('[a-zA-Z ]*')])],
+        entertainmentArea:['',Validators.compose([Validators.required,,Validators.pattern('[a-zA-Z ]*')])],
+        suvDuration:['',Validators.compose([Validators.required,,Validators.pattern('[0-9]*')])],
+        suvCost:['',Validators.compose([Validators.required,,Validators.pattern('[0-9]*')])], 
+        sedanDuration:['',Validators.compose([Validators.required,,Validators.pattern('[0-9]*')])],
+      })
+ 
+// Form control name with default value and validator
+this.form = formBuilder.group({
+  option: ['', Validators.required]
+});
+} // constructor()
 
-  }
+submitForm(event): void {
+// Prevent default submit action
+event.preventDefault();
+
+}
+
   //slide 1 main details
   createMainDetails(
     carwashName:string,
@@ -66,6 +88,18 @@ export class HomePage {
     sundayHrsOpen:Time,
     sundayHrsClose:Time
   ): void {
+    if (this.carwashName === "" || this.location === "") {
+      const alert = this.alertCtrl.create({
+        title: "Warning",
+        subTitle: "please fill in all fields",
+        buttons: ["OK"]
+        
+      });
+      
+      alert.present();
+      
+    }
+      else {
     this.mainPro
       .createCarwashMainDetails(carwashName,
         location,
@@ -81,6 +115,7 @@ export class HomePage {
         this.navCtrl.pop();
       });
   }
+}
   //slide 2 car details
   saveCarOperationsDetails(
     entertainmentAvail:boolean,
@@ -94,6 +129,7 @@ export class HomePage {
     femaleEmployees:number,
   
   ): void {
+    
     this.operationsPro
       .createCarOperationsDetails(entertainmentAvail,
         entertainmentArea,
@@ -108,7 +144,7 @@ export class HomePage {
         this.navCtrl.pop();
       });
     }
-   
+  
 //slide 3 
   nextMainDetails(){
     this.navCtrl.push(MainDetailsPage);
@@ -138,6 +174,7 @@ export class HomePage {
        truckCost:string,
       
   ): void {
+    
     this.carsPro
       .createCarsDetails(suvDuration,
         sedanDuration,
