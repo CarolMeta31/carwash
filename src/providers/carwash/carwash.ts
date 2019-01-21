@@ -12,9 +12,9 @@ export class CarwashProvider {
   public carWashListRef: firebase.database.Reference;
 
   constructor() {
-    firebase.auth().onAuthStateChanged(user=> {
-      if (user) {
-        this.currentUser=user;
+    firebase.auth().onAuthStateChanged(users=> {
+      if (users) {
+        this.currentUser=users;
         this. carWashListRef=firebase.database().ref(`/carwashes`)
         
       }
