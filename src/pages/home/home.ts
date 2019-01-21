@@ -72,7 +72,14 @@ locate(){
     this.lat= pos.coords.latitude;
     this.lng = pos.coords.longitude;
   }).catch(err =>console.log(err));
-   
+
+  let alert = this.alertCtrl.create({
+    title: 'Thank You!',
+    subTitle: 'Your current coordinates have been captured!',
+    buttons: ['OK']
+  });
+  alert.present();
+  
 }
 
 private addGeofence() {
