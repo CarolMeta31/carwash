@@ -25,8 +25,13 @@ export class HomePage {
   Cards:string='';
   carwashName:string='';
   location:string='';
-  openHours:DateTime;
-  entertainmentArea:string;
+  openHours:string='';
+    closinghours:string='';
+    satrdayHrsOpen:string='';
+    satrdayHrsclose:string='';
+    sundayHrsOpen:string='';
+    sundayHrsClose:string='';
+  entertainmentArea:string='';
 
 
   userForm:FormGroup;
@@ -105,12 +110,12 @@ private addGeofence() {
     carwashName:string,
        lat:string,
       lng:string,
-    openHours:Time,
-    closinghours:Time,
-    satrdayHrsOpen:Time,
-    satrdayHrsclose:Time,
-    sundayHrsOpen:Time,
-    sundayHrsClose:Time,
+    openHours:string,
+    closinghours:string,
+    satrdayHrsOpen:string,
+    satrdayHrsclose:string,
+    sundayHrsOpen:string,
+    sundayHrsClose:string,
     //slide2
     entertainmentAvail:boolean,
     entertainmentArea:string,
@@ -122,7 +127,7 @@ private addGeofence() {
     maleEmployees:number,
   femaleEmployees:number
   ): void {
-    if (this.carwashName === "" || this.lat === "" || this.lng === "" || this.entertainmentArea==="") {
+    if (this.carwashName === "" || this.lat === "" || this.lng === "" || this.entertainmentArea===""||this.openHours===""||this.closinghours===""||this.satrdayHrsOpen===""||this.satrdayHrsOpen===""||this.sundayHrsOpen===""||this.sundayHrsClose==="") {
       const alert = this.alertCtrl.create({
         title: "Warning",
         subTitle: "please fill in all fields",
