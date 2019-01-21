@@ -9,6 +9,9 @@ import { ListDataPage } from './../list-data/list-data';
 import { HomePage } from './../home/home';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import firebase , { User }from 'firebase/app';
+import 'firebase/auth';
+import 'firebase/database';
 
 
 
@@ -21,11 +24,12 @@ export class WelcomePage {
 //declaring list variables
   public carwashList: Array<any>;
 
- 
+
 
   constructor(public navCtrl: NavController,private carPro:CarwashProvider,
      public navParams: NavParams,private authPro:AuthProvider) {
-  }
+  
+    }
 
   ionViewCanEnter(){
  
@@ -36,13 +40,13 @@ export class WelcomePage {
       this.carwashList= [];
       carwashListSnapshot.forEach(snap => {
         this.carwashList.push({
+       
           id: snap.key,
           carwashName: snap.val().carwashName,
           carwashLatitude: snap.val().carwashLatitude,
           carwashLongatude: snap.val().carwashLongatude,
           weekdayOpen: snap.val().weekdayOpen,
           weekdayClose: snap.val().weekdayClose,
-          
           saturdayOpen: snap.val().saturdayOpen,
           saturdayClose:snap.val().saturdayClose,
           sundayOpen:snap.val().sundayOpen,

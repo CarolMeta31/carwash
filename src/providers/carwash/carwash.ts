@@ -12,9 +12,9 @@ export class CarwashProvider {
   public carWashListRef: firebase.database.Reference;
 
   constructor() {
-    firebase.auth().onAuthStateChanged(user=> {
-      if (user) {
-        this.currentUser=user;
+    firebase.auth().onAuthStateChanged(users=> {
+      if (users) {
+        this.currentUser=users;
         this. carWashListRef=firebase.database().ref(`/carwashes`)
         
       }
@@ -27,12 +27,12 @@ export class CarwashProvider {
     carwashName:string,
     lat:string,
     lng:string,
-    openHours:Time,
-    closinghours:Time,
-    satrdayHrsOpen:Time,
-    satrdayHrsclose:Time,
-    sundayHrsOpen:Time,
-    sundayHrsClose:Time,
+    openHours:string,
+    closinghours:string,
+    satrdayHrsOpen:string,
+    satrdayHrsclose:string,
+    sundayHrsOpen:string,
+    sundayHrsClose:string,
     //slide2
     entertainmentAvailable:boolean,
     entertainmentArea:string,
