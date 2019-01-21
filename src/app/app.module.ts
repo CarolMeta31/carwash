@@ -23,7 +23,8 @@ import { EntertainmentProvider } from '../providers/entertainment/entertainment'
 
 import { MainDetailsProvider } from '../providers/main-details/main-details';
 import { OperationalDetailsProvider } from '../providers/operational-details/operational-details';
-
+import {Geolocation} from '@ionic-native/geolocation';
+import { Geofence } from '@ionic-native/geofence';
 
 @NgModule({
   declarations: [
@@ -69,8 +70,9 @@ import { OperationalDetailsProvider } from '../providers/operational-details/ope
     CarwashProvider,
     EntertainmentProvider,
     MainDetailsProvider,
-    OperationalDetailsProvider
-
+    OperationalDetailsProvider,
+    Geolocation,
+    Geofence,
   ]
 })
 export class AppModule {}

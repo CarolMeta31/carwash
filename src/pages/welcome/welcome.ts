@@ -38,7 +38,8 @@ export class WelcomePage {
         this.carwashList.push({
           id: snap.key,
           carwashName: snap.val().carwashName,
-          carwashLocation: snap.val().carwashLocation,
+          carwashLatitude: snap.val().carwashLatitude,
+          carwashLongatude: snap.val().carwashLongatude,
           weekdayOpen: snap.val().weekdayOpen,
           weekdayClose: snap.val().weekdayClose,
           

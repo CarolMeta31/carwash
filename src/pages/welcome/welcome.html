@@ -32,7 +32,9 @@
         <ion-item *ngFor="let carwash of carwashList" 
         (click)="goToCarwashDetail(carwash.id)">
           <h2>{{carwash?.carwashName}}</h2>
-          <p>location: <strong>{{carwash?.carwashLocation}}</strong></p>
+          <p>Current Location Co-ordinates</p>
+          <p>latitude: <strong>{{carwash?.carwashLatitude}}</strong></p>
+          <p>longatude: <strong>{{carwash?.carwashLongatude}}</strong></p>
           <p>operations times mon-fri</p>
           <p>opens: <strong>{{carwash?.weekdayOpen}}</strong></p>
           <p>closes: <strong>{{carwash?.weekdayClose}}</strong></p>
