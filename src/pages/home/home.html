@@ -25,7 +25,7 @@
     <ion-card align="center" class="car">
         <ion-card-header> Main Details</ion-card-header>
         </ion-card>
-<form [formGroup]="userForm" class="form-holder" (ngSubmit)="next1()"  novalidate>   
+<form [formGroup]="userForm" class="form-holder"  novalidate>   
         
 
             <ion-item>
@@ -40,16 +40,14 @@
                             <p ion-text color="danger">CarWashName  field is required!</p>
                     </ion-item>
             <ion-item>
-                <ion-label floating text-wrap>What is the location of the Car Wash?</ion-label>
-                <ion-input type="text" formControlName="location" class="outline" [(ngModel)]="location"></ion-input>
+                <ion-label  text-wrap >What is the location of the Car Wash?</ion-label>  
+                <!-- <ion-input type="text" formControlName="location" class="outline" [(ngModel)]="location"></ion-input> -->
             </ion-item>
-
-            <ion-item  no-lines *ngIf="userForm.get('location').hasError('required') && userForm.get('location').touched" class="invalid">
-            <p ion-text color="danger">Location field is required!</p>
-            </ion-item>
-            <ion-item no-lines *ngIf="userForm.get('location').hasError('pattern') && userForm.get('location').touched" class="invalid">
-            <p ion-text color="danger"> Location can only take letters!</p>
-            </ion-item>
+            <button ion-button  (click)="locate()">Get Current Location</button> 
+            <p>Latitude : {{lat}}</p>
+            <p>Longitude : {{lng}}</p> 
+          
+          
         </form>  
            
            
@@ -241,7 +239,8 @@
 
             <button ion-button block  color="twittwer"
             (click)="createMainDetails(carwashName,
-            location,
+            lat,
+             lng,
             openHours,
             closinghours,
             satrdayHrsOpen,

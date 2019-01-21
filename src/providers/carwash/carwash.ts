@@ -25,7 +25,8 @@ export class CarwashProvider {
   createCarwashDetails(
     //slide1
     carwashName:string,
-    location:string,
+    lat:string,
+    lng:string,
     openHours:Time,
     closinghours:Time,
     satrdayHrsOpen:Time,
@@ -48,7 +49,8 @@ export class CarwashProvider {
     return this.carWashListRef.push({
       //slide1
       carwashName: carwashName,
-      carwashLocation:location,
+      carwashLatitude:lat,
+      carwashLongatude:lng,
       weekdayOpen: openHours,
       weekdayClose: closinghours,
       saturdayOpen: satrdayHrsOpen,
@@ -64,7 +66,7 @@ export class CarwashProvider {
      miniCars:numberOfCarsMini,
     truckCars: numberOfCarsTruck,
      males:maleEmployees,
-     females: femaleEmployees,
+     females:femaleEmployees
       
      
     });
