@@ -1,7 +1,7 @@
 
 <ion-header>
   <ion-navbar color="primary">
-    <ion-title>welcome</ion-title>
+    <ion-title>Details page</ion-title>
     <ion-buttons end>
       <button ion-button icon-only (click)="logOut()">
         <ion-icon name="log-out"></ion-icon>
@@ -15,12 +15,7 @@
   <div class="container">
 
    
-    
-
-        <ion-fab right bottom>
-            <button ion-fab mini (click)="goToCreate()"><ion-icon name="add"></ion-icon></button>
-    </ion-fab>
-
+      
       
        <!-- We are creating an item that will repeat itself for every event we have in our database.
     We are showing necessary event data like the name, the ticket price for guests and the event date.
@@ -28,23 +23,28 @@
     When users tap on the event, they are going to be taken to the event’s detail page.
     
     We are sending the event id in the goToEventDetail() function so we can pull the specific ID from Firebase. -->
-    <ion-list>
-        <ion-item *ngFor="let carwash of carwashList" 
-        (click)="goToCarwashDetail(carwash.id)">
-          <h2>{{carwash?.carwashName}}</h2>
-          <p>Current Location Co-ordinates</p>
-          <p>latitude: <strong>{{carwash?.carwashLatitude}}</strong></p>
-          <p>longatude: <strong>{{carwash?.carwashLongatude}}</strong></p>
-          <p>operations times mon-fri</p>
-          <p>opens: <strong>{{carwash?.weekdayOpen}}</strong></p>
-          <p>closes: <strong>{{carwash?.weekdayClose}}</strong></p>
-        </ion-item>
-      </ion-list>
-       
+    
+    <ion-card align="center" class="car" *ngFor="let carwash of carwashList" 
+    (click)="goToCarwashDetail(carwash.id)" >
+
+      
+        <ion-card-header>
+        
+                  {{carwash?.carwashName}}
+              
+        </ion-card-header>
+      
+      </ion-card>
+
+   
+     
 
   </div>
 
 
+  <ion-fab right bottom>
+      <button ion-fab mini (click)="goToCreate()"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
 
   
 </ion-content>

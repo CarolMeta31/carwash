@@ -28,8 +28,8 @@ page-home {
         margin-right: 0px;
         padding:0px;
       box-shadow: none;
-      top: 0;
-      bottom: 0;
+      top:0;
+      bottom:0;
       left: 0;
       flex-direction: column;
       right: 0;
@@ -49,11 +49,12 @@ page-home {
            background-color:transparent;
     }
 
-    #par{
+    .par{
         color:black;
     }
     #parr{
         color:white;
+       // rgba(0.0,0.0,0.0,0.3)
     }
 
     // .car{
@@ -74,18 +75,11 @@ page-home {
        
     // }
     .ent{
-        background-color:#16316B;
-        padding:20px;
+        //background-color:transparent;
+       
+        padding: 0px;
         border-radius: 10px;
-        .card-header{
-            font-size: large;
-            color: white
-        }
-        .icon{
-            color: white;
-            size: 50px;
-        }
-        
+      
     }
     
 }

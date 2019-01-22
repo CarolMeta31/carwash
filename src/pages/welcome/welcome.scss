@@ -9,27 +9,16 @@ page-welcome {
         }
 
         .car{
-            background-color: #16316B;
-            padding:20px;
-    
-    
-    
-            border-radius: 10px;
-            .card-header{
-                font-size: medium;
-                color: white
-            }
-            .icon{
-                color: white;
-                size: 100px;
-            }
-           
+            background-color: rgba(0.0,0.0,0.0,0.1);
+            padding:20px; 
+             border-radius: 10px;
+       
         }
 
         .container{
             background-color:transparent;
             border-radius: 0px;
-            margin-top: 50%;
+            margin-top: 0%;
             margin-left: 0px;
             margin-right: 0px;
             padding:0px;
@@ -42,5 +31,5 @@ page-welcome {
           position: absolute;
          
          }
-        
+      
 }

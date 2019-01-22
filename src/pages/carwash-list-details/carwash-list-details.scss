@@ -1,3 +1,27 @@
 page-carwash-list-details {
 
+    p {
+     
+        text-align: right;
+        
+      }
+
+      h2 {
+        font-family: verdana;
+        font-size: 20px;
+        text-align: center;
+      }
+
+      h3 {
+        font-family: verdana;
+        font-size: 20px;
+        text-align: left;
+      }
+
+      .login-content {
+        background-color:#F9F8EB;
+        // background-image: url('../../assets/imgs/something.jpg');
+         background-repeat :no-repeat;
+         background-size:cover;
+        }
 }

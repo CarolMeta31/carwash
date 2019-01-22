@@ -21,6 +21,10 @@ import { Geofence } from '@ionic-native/geofence';
     templateUrl: 'home.html'
 })
 export class HomePage {
+
+  que:string='main'
+
+
   form: FormGroup;
   Cards:string='';
   carwashName:string='';
