@@ -8,12 +8,19 @@ import {AlertController} from 'ionic-angular';
 @Injectable()
 export class AuthProvider {
 
- 
+  userProfile:firebase.database.Reference;
+   currentUser:User;
   
   
   
     constructor() {
       console.log('Hello AuthProvider Provider');
+      firebase.auth().onAuthStateChanged(user=>{
+        if(user){
+          this.currentUser=user;
+          this.userProfile=firebase.database().ref(`/userProfile/${user.uid}`)
+        }
+      })
    }
   
   //function to login
