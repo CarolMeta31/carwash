@@ -15,7 +15,7 @@ export class CarwashProvider {
     firebase.auth().onAuthStateChanged(users=> {
       if (users) {
         this.currentUser=users;
-        this. carWashListRef=firebase.database().ref(`/carwashes`)
+        this. carWashListRef=firebase.database().ref(`/carwashlists`)
         
       }
     });
@@ -37,9 +37,7 @@ export class CarwashProvider {
     entertainmentAvailable:boolean,
     entertainmentArea:string,
    numberOfCarsSedan:number,
-   numberOfCarsSuv:number,
    numberOfCarsVan:number,
-   numberOfCarsMini:number,
     numberOfCarsTruck:number,
     maleEmployees:number,
      femaleEmployees:number,
@@ -61,9 +59,7 @@ export class CarwashProvider {
       entertainAvail: entertainmentAvailable,
       typeOfArea:entertainmentArea,
      sedanCars: numberOfCarsSedan,
-    suvCars: numberOfCarsSuv,
      vanCars:numberOfCarsVan,
-     miniCars:numberOfCarsMini,
     truckCars: numberOfCarsTruck,
      males:maleEmployees,
      females:femaleEmployees

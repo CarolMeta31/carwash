@@ -1,3 +1,4 @@
+import { CarwashListDetailsPage } from './../carwash-list-details/carwash-list-details';
 import { AuthProvider } from './../../providers/auth/auth';
 import { LoginPage } from './../login/login';
 import { WelcomePage } from './../welcome/welcome';
@@ -42,7 +43,7 @@ export class HomePage {
   lat:any;
   lng:any;
   
- 
+
   
 
 
@@ -67,6 +68,8 @@ export class HomePage {
 this.form = formBuilder.group({
   option: ['', Validators.required]
 });
+
+
 } // constructor()
 
 submitForm(event): void {
@@ -131,9 +134,7 @@ private addGeofence() {
     entertainmentAvail:boolean,
     entertainmentArea:string,
     numberOfCarsSedan:number,
-   numberOfCarsSuv:number,
    numberOfCarsVan:number,
-   numberOfCarsMini:number,
     numberOfCarsTruck:number,
     maleEmployees:number,
   femaleEmployees:number
@@ -166,10 +167,8 @@ private addGeofence() {
       entertainmentAvail,
             entertainmentArea,
            numberOfCarsSedan,
-             numberOfCarsSuv,
            numberOfCarsVan,
-          numberOfCarsMini,
-          numberOfCarsTruck,
+             numberOfCarsTruck,
             maleEmployees,
             femaleEmployees)
       .then(newCarwashDetails => {
