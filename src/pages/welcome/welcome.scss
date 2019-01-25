@@ -2,16 +2,21 @@ page-welcome {
 
 
     .login-content {
-        background-color:#F9F8EB;
+       // background-color:#d7fbe8;
         // background-image: url('../../assets/imgs/something.jpg');
          background-repeat :no-repeat;
          background-size:cover;
         }
 
         .car{
-            background-color: rgba(0.0,0.0,0.0,0.1);
+            background-color: #d7fbe8;
             padding:20px; 
              border-radius: 10px;
+             .card-header{
+                font-size: large;
+                //color: white
+            }
+
        
         }
 

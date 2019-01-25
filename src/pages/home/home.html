@@ -53,9 +53,10 @@
         <ion-card class="ent">     
             <ion-card-content >
                 <ion-item no-lines>
-                        <button ion-button  (click)="locate()">Get Current Location</button> 
+                        
                         <p>Latitude : {{lat}}</p>
                         <p>Longitude : {{lng}}</p>   
+                        <button  ion-button full (click)="locate()">Get Current Location</button> 
                     <!-- <ion-input type="text" formControlName="location" class="outline" [(ngModel)]="location"></ion-input> -->
                 </ion-item>
             </ion-card-content>
