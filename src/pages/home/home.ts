@@ -171,6 +171,7 @@ private addGeofence() {
              numberOfCarsTruck,
             maleEmployees,
             femaleEmployees)
+            
       .then(newCarwashDetails => {
           //goes back to welcome page
           this.navCtrl.push(WelcomePage);
