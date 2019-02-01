@@ -34,7 +34,7 @@ export class CarwashProvider {
     sundayHrsOpen:string,
     sundayHrsClose:string,
     //slide2
-    entertainmentAvailable:boolean,
+    entertainmentAvail:Boolean,
     entertainmentArea:string,
    numberOfCarsSedan:number,
    numberOfCarsVan:number,
@@ -56,7 +56,7 @@ export class CarwashProvider {
       sundayOpen:sundayHrsOpen,
       sundayClose:sundayHrsClose,
       //slide2
-      entertainAvail: entertainmentAvailable,
+      entertainAvailable:entertainmentAvail,
       typeOfArea:entertainmentArea,
      sedanCars: numberOfCarsSedan,
      vanCars:numberOfCarsVan,
