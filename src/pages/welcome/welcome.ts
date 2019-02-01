@@ -32,10 +32,7 @@ export class WelcomePage {
     }
 
   ionViewCanEnter(){
- 
-
- 
-    //Now we need to get that list of carwashes from Firebase
+ //Now we need to get that list of carwashes from Firebase
     this.carPro.getcarwashList().on("value", carwashListSnapshot => {
       this.carwashList= [];
       carwashListSnapshot.forEach(snap => {
