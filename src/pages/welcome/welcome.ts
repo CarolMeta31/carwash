@@ -53,7 +53,7 @@ export class WelcomePage {
           sundayClose:snap.val().sundayClose,
   
           //slide 2
-          entertainAvailable: snap.val(). entertainAvailable,
+        
       typeOfArea: snap.val().typeOfArea,
       sedanCars: snap.val().sedanCars,
       suvCars: snap.val().suvCars,
