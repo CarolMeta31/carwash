@@ -70,7 +70,7 @@ this.form = formBuilder.group({
 });
 
 
-} // constructor()
+} 
 
 submitForm(event): void {
 // Prevent default submit action
@@ -131,7 +131,7 @@ private addGeofence() {
     sundayHrsOpen:string,
     sundayHrsClose:string,
     //slide2
-    entertainmentAvail:boolean,
+    entertainmentAvail:Boolean,
     entertainmentArea:string,
     numberOfCarsSedan:number,
    numberOfCarsVan:number,

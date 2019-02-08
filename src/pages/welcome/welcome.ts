@@ -24,7 +24,7 @@ export class WelcomePage {
 //declaring list variables
   public carwashList: Array<any>;
 
-
+  categories: Array<any>;
 
   constructor(public navCtrl: NavController,private carPro:CarwashProvider,
      public navParams: NavParams,private authPro:AuthProvider) {
@@ -50,7 +50,7 @@ export class WelcomePage {
           sundayClose:snap.val().sundayClose,
   
           //slide 2
-        
+          entertainmentAvail: snap.val().entertainmentAvail,
       typeOfArea: snap.val().typeOfArea,
       sedanCars: snap.val().sedanCars,
       suvCars: snap.val().suvCars,
@@ -83,5 +83,8 @@ goToCarwashDetail(carwashId: string):void {
  
    this.navCtrl.push(CarwashListDetailsPage, {carwashId:carwashId});
 }
+
+
+
  
 }

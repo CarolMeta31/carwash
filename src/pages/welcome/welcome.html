@@ -12,7 +12,7 @@
 
 <ion-content class="login-content">
 
-  <div class="container">
+   <div class="container"> 
 
    
       
@@ -24,27 +24,36 @@
     
     We are sending the event id in the goToEventDetail() function so we can pull the specific ID from Firebase. -->
     
-    <ion-card align="center" class="car" *ngFor="let carwash of carwashList" 
+    <!-- <ion-card align="center" class="car" *ngFor="let carwash of carwashList" 
     (click)="goToCarwashDetail(carwash.id)" >
 
       
         <ion-card-header>
-        
-                 <strong>{{carwash?.carwashName}}</strong> 
-              
+            <strong>{{carwash?.carwashName}}</strong>  
+             
         </ion-card-header>
       
       </ion-card>
+    -->
 
-   
-     
-
-  </div>
+    <ion-grid>
+        <ion-row>
+            <ion-col col-md-4>       
+    <ion-card *ngFor="let carwash of carwashList" (click)="goToCarwashDetail(carwash.id)"  >
+        <ion-card-header>
+       <ion-item>
+           <strong>{{carwash?.carwashName}}</strong>
+          </ion-item>
+      </ion-card-header>
+      </ion-card>
+  </ion-col>
+  </ion-row>
+  </ion-grid>
+</div> 
 
 
   <ion-fab right bottom>
       <button   ion-fab mini (click)="goToCreate()"><ion-icon name="add"></ion-icon></button>
   </ion-fab>
-
   
 </ion-content>

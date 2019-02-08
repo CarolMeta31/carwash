@@ -1,12 +1,15 @@
 import { Time } from '@angular/common';
-import { Injectable } from '@angular/core';
+import { Injectable,Pipe } from '@angular/core';
 import firebase , { User }from 'firebase/app';
+import * as _ from 'lodash';
 import 'firebase/auth';
 import 'firebase/database';
 
 @Injectable()
 export class CarwashProvider {
-
+transform(array, args){
+  return _.sory(array, args);
+}
   currentUser:User;
 
   public carWashListRef: firebase.database.Reference;
@@ -21,6 +24,8 @@ export class CarwashProvider {
     });
     console.log('Hello CarwashProvider Provider');
   }
+
+
   
   createCarwashDetails(
     //slide1
@@ -34,7 +39,7 @@ export class CarwashProvider {
     sundayHrsOpen:string,
     sundayHrsClose:string,
     //slide2
-    entertainmentAvailable:boolean,
+    entertainmentAvail:Boolean,
     entertainmentArea:string,
    numberOfCarsSedan:number,
    numberOfCarsVan:number,
@@ -56,7 +61,7 @@ export class CarwashProvider {
       sundayOpen:sundayHrsOpen,
       sundayClose:sundayHrsClose,
       //slide2
-      entertainAvail: entertainmentAvailable,
+      entertainAvailable:entertainmentAvail,
       typeOfArea:entertainmentArea,
      sedanCars: numberOfCarsSedan,
      vanCars:numberOfCarsVan,
