@@ -131,7 +131,7 @@ private addGeofence() {
     sundayHrsOpen:string,
     sundayHrsClose:string,
     //slide2
-    entertainmentAvail:Boolean,
+
     entertainmentArea:string,
     numberOfCarsSedan:number,
    numberOfCarsVan:number,
@@ -164,7 +164,7 @@ private addGeofence() {
         sundayHrsOpen,
         sundayHrsClose,
       //slide 2
-      entertainmentAvail,
+
             entertainmentArea,
            numberOfCarsSedan,
            numberOfCarsVan,

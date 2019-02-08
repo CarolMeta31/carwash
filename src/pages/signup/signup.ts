@@ -32,10 +32,7 @@ export class SignupPage {
   ) {
     this.signupForm = formBuilder.group({
 
-      username:['',Validators.compose([Validators.required,
-        Validators.minLength(3),
-        Validators.pattern('[a-zA-Z]*')])],
-
+    
       email: [
         "",
         Validators.compose([Validators.required])

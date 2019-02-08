@@ -39,7 +39,7 @@ transform(array, args){
     sundayHrsOpen:string,
     sundayHrsClose:string,
     //slide2
-    entertainmentAvail:Boolean,
+  
     entertainmentArea:string,
    numberOfCarsSedan:number,
    numberOfCarsVan:number,
@@ -61,7 +61,7 @@ transform(array, args){
       sundayOpen:sundayHrsOpen,
       sundayClose:sundayHrsClose,
       //slide2
-      entertainAvailable:entertainmentAvail,
+    
       typeOfArea:entertainmentArea,
      sedanCars: numberOfCarsSedan,
      vanCars:numberOfCarsVan,

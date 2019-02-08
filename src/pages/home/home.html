@@ -50,17 +50,17 @@
                     <ion-item  no-lines *ngIf="userForm.get('carwashName').hasError('required') && userForm.get('carwashName').touched" class="invalid">
                             <p ion-text color="danger">CarWashName  field is required!</p>
                     </ion-item>
-        <ion-card class="ent">     
+        
             <ion-card-content >
                 <ion-item no-lines>
                         
-                        <p>Latitude : {{lat}}</p>
-                        <p>Longitude : {{lng}}</p>   
+                        <!-- <p>Latitude : {{lat}}</p>
+                        <p>Longitude : {{lng}}</p>    -->
                         <button  ion-button full (click)="locate()">Get Current Location</button> 
                     <!-- <ion-input type="text" formControlName="location" class="outline" [(ngModel)]="location"></ion-input> -->
                 </ion-item>
             </ion-card-content>
-        </ion-card>
+  
 
        
         </form>  
@@ -183,34 +183,26 @@
     <ion-list *ngSwitchCase="'cars'">    
         
                                                         
-<ion-card class="ent">
 
-        <ion-card-content>
-
-                <ion-item no-lines>
-                    <ion-label text-wrap>Is the car wash situated near an entertainment place?</ion-label>
-                </ion-item>
-         
-                <ion-item no-lines>
-                <ion-label text-wrap>Select:</ion-label>
-                    <ion-select  name="d" class="myselect" [(ngModel)]="entertainmentAvail">
-                    <ion-option value="yes">Yes</ion-option>
-                    <ion-option value="no">No</ion-option>
-                    </ion-select>
-                </ion-item>
-                           
-            </ion-card-content>
-          
-    </ion-card>
           
     <form [formGroup]="userForm" class="form-holder"(submit)="submitForm($event)"novalidate>
     
         <ion-card class="ent">
             <ion-card-content>
                 <ion-item no-lines>
-                    <ion-label floating text-wrap>What type of entertianment area are you situated next to?</ion-label>
-                    <ion-input  type="text" formControlName="entertainmentArea" [(ngModel)]="entertainmentArea" class="outline"></ion-input>
+                    <ion-label  text-wrap>What type of entertianment area are you situated next to?</ion-label>
+            
                 </ion-item>
+                <ion-item no-lines>
+                    <ion-label text-wrap>Select:</ion-label>
+                        <ion-select  name="d" class="myselect" formControlName="entertainmentArea" [(ngModel)]="entertainmentArea">
+                        <ion-option value="Tarven/Pub">Tarven/Pub</ion-option>
+                        <ion-option value="Park">Park</ion-option>
+                        <ion-option value="eatry/Resturant">Eatry/Resturant</ion-option>
+                        <ion-option value="Shisa Nyama">Shisa Nyama</ion-option>
+                        <ion-option value="none">None</ion-option>
+                        </ion-select>
+                    </ion-item>
             </ion-card-content>
          </ion-card>
 
@@ -282,7 +274,6 @@
             sundayHrsOpen,
             sundayHrsClose,
 
-            entertainmentAvail,
             entertainmentArea,
             numberOfCarsSedan,
             numberOfCarsVan,

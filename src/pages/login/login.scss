@@ -1,6 +1,6 @@
 page-login {
   .content{
-    background-color:#ebfffb;
+    background-color:#f9f8eb;
 }
 .scroll-content {
     overflow: hidden !important;
@@ -33,7 +33,7 @@ page-login {
             width: 100px;
             height: 100px;
             border-radius: 100%;
-            background: linear-gradient(270deg, #3fbac2, #4d606e);
+            background: linear-gradient(270deg, #ececeb, #4d606e);
             background-size: 100% 100%;
             background-repeat: no-repeat;
             background-image: url("../assets/imgs/Untitled.png");
@@ -64,7 +64,7 @@ page-login {
     align-items: center;
     justify-content: center;
     padding: 10px;
-    color: #2f4cac;
+    color: #07617d;
     font-weight: bolder
 }
 }
@@ -88,10 +88,10 @@ page-login {
            // border-radius: 10px;
         }
         .label{
-            color:#2f4cac;
+            color:#07617d;
         }
         .icon{
-            color:#488aff;
+            color:#07617d;
         }
       }
     #button {
