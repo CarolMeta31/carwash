@@ -72,7 +72,7 @@ export class WelcomePage {
     this.navCtrl.push(HomePage);
   }
   
-    logOut(): void {
+  logOut(): void {
     this.authPro.logoutUser().then(() => {
       this.navCtrl.setRoot(LoginPage);
     });
