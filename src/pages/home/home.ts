@@ -16,7 +16,7 @@ import {FormControl} from '@angular/forms';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import {Geolocation} from '@ionic-native/geolocation';
 import { Geofence } from '@ionic-native/geofence';
-import { LocationAccuracy } from '@ionic-native/location-accuracy/ngx';
+
 @Component({
     selector: 'page-home',
     templateUrl: 'home.html'
@@ -49,7 +49,7 @@ export class HomePage {
 
   constructor(public navCtrl: NavController,private carwashPro:CarwashProvider,
     public formBuilder: FormBuilder,private authPro:AuthProvider,
-    public alertCtrl:AlertController,private geo:Geolocation,private locationAccuracy: LocationAccuracy,
+    public alertCtrl:AlertController,private geo:Geolocation,
     public geofence: Geofence) {
       this.userForm= this.formBuilder.group({
     

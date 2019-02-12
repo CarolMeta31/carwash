@@ -25,8 +25,8 @@ import { MainDetailsProvider } from '../providers/main-details/main-details';
 import { OperationalDetailsProvider } from '../providers/operational-details/operational-details';
 import {Geolocation} from '@ionic-native/geolocation';
 import { Geofence } from '@ionic-native/geofence';
-import { LocationAccuracy } from '@ionic-native/location-accuracy/ngx';
-import { NativeGeocoder, NativeGeocoderReverseResult, NativeGeocoderForwardResult, NativeGeocoderOptions } from '@ionic-native/native-geocoder/ngx';
+
+
 
 @NgModule({
   declarations: [
@@ -67,7 +67,7 @@ import { NativeGeocoder, NativeGeocoderReverseResult, NativeGeocoderForwardResul
   providers: [
     StatusBar,
     SplashScreen,
-    LocationAccuracy,
+
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthProvider,
     CarwashProvider,
@@ -76,7 +76,7 @@ import { NativeGeocoder, NativeGeocoderReverseResult, NativeGeocoderForwardResul
     OperationalDetailsProvider,
     Geolocation,
     Geofence,
-    NativeGeocoder, 
+
 
   ]
 })
