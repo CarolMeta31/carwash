@@ -15,9 +15,10 @@ page-welcome {
              .card-header{
                 font-size: large;
                 //color: white
-             
             }
-        
+
+            
+        }
 
         .container{
             background-color:transparent;
@@ -35,16 +36,12 @@ page-welcome {
           position: absolute;
          
          }
+       .odd {
+        background-color:#07617d;
+      
+    }
+    .even {
+        background-color: lightgrey;
+    }
 
-    
-         .odd {
-            background-color:#07617d;
-          
-        }
-        .even {
-            background-color: lightgrey;
-        }
-        }
-    
 }
-

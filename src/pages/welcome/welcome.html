@@ -27,8 +27,7 @@
     
     
 
-
-  <ion-card   align="center" class="car" *ngFor="let carwash of carwashList; 
+  <ion-card id="grid"  align="center"  *ngFor="let carwash of carwashList; 
     let index =index;
     let isOdd=odd;
     let isEven=even"
@@ -37,24 +36,22 @@
 
     (click)="goToCarwashDetail(carwash.id)" >
 
-      
-    <ion-card-header>
+  <ion-card-header>
+    
             <strong>{{carwash?.carwashName}}</strong>  
         
-  
-    
-
-        </ion-card-header>
+       
   
 
-        </ion-card>
+          </ion-card-header>
 
-
-
+</ion-card>
+     
 
   <ion-fab right bottom>
       <button   ion-fab mini (click)="goToCreate()"><ion-icon name="add"></ion-icon></button>
   </ion-fab>
+
 
 </div>   
 
