@@ -23,27 +23,24 @@
     When users tap on the event, they are going to be taken to the event’s detail page.
     
     We are sending the event id in the goToEventDetail() function so we can pull the specific ID from Firebase. -->
-    
-  <ion-card align="center" class="car" *ngFor="let carwash of carwashList" 
+
+  <ion-card   align="center" class="car" *ngFor="let carwash of carwashList; 
+    let index =index;
+    let isOdd=odd;
+    let isEven=even"
+    [class.odd]="isOdd" 
+    [class.even]="isEven"
     (click)="goToCarwashDetail(carwash.id)" >
 
       
-        <ion-card-header>
+    <ion-card-header>
             <strong>{{carwash?.carwashName}}</strong>  
-             
-        </ion-card-header>
+        
       
-      </ion-card>
+        </ion-card-header>
   
 
-        
-    <!-- <ion-card *ngFor="let carwash of carwashList" (click)="goToCarwashDetail(carwash.id)"  >
-        <ion-card-header>
-       <ion-item>
-           <strong>{{carwash?.carwashName}}</strong>
-          </ion-item>
-      </ion-card-header>
-      </ion-card> -->
+        </ion-card>
 
 </div> 
 
